@@ -1,4 +1,8 @@
-47.100.112.48 root/Hyj775523      106.14. 127. 10
+例如：47.100.112.98 root/Hyj775523      106.14. 127. 10
+
+mac中：sudo ssh 47.100.112.98
+Password: 输入计算机的密码
+[root@47.100.112.98@node02 ~]Password:输入远程服务器密码
 
 /usr/local/node/git_db/
 
