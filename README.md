@@ -1,8 +1,10 @@
 技术总结文档归纳
 ## 目录
 
-1.[连接Linux](docs/connect.md)
+ [发布订阅](docs/publish-subscribe.md)
 
-2.[高阶函数](docs/highFun.md)
+ [实现异步](docs/asynchronous.md)
 
-3.[实现异步](docs/asynchronous.md)
+ [连接Linux](docs/connect.md)
+
+ [高阶函数](docs/highFun.md)
