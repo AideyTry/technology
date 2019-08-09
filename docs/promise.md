@@ -12,7 +12,6 @@
 
      promise的三个状态： 成功态、 失败态、等待态
      
-     ```
      // 当创建一个promise的时候，需要提供一个执行器函数，此函数会立即执行，所以先打印123再打印456
     // 默认是等待态，可以转化成成功或者失败，状态更改后就不能修改状态了。
     let Promise = require('./promise.js')
@@ -27,8 +26,7 @@
     }, (reason) => {
       console.log('fail', reason)
     })
-     ```
-     ###### 实现promise基本功能
+  ###### 实现promise基本功能
      ```
      class Promise {
       constructor(executor) {
