@@ -1,6 +1,8 @@
 技术总结文档归纳
 ## 目录
 
+ [webpack篇](docs/webpack.md)
+
  [promise](docs/promise.md)
 
  [观察者模式](docs/observer.md)
