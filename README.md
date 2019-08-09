@@ -1,6 +1,8 @@
 技术总结文档归纳
 ## 目录
 
+ [promise](docs/promise.md)
+
  [观察者模式](docs/observer.md)
 
  [发布订阅](docs/publish-subscribe.md)
