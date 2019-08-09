@@ -27,7 +27,6 @@
       console.log('fail', reason)
     })
   ###### 实现promise基本功能
-     ```
      class Promise {
       constructor(executor) {
         this.status = 'pending'
@@ -56,4 +55,3 @@
       }
     }
     module.exports = Promise
-     ```
