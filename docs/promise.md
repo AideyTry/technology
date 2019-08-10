@@ -55,3 +55,71 @@
       }
     }
     module.exports = Promise
+#### 异步
+
+##### 调用
+
+```
+// 当创建一个promise的时候，需要提供一个执行器函数，此函数会立即执行，所以先打印1再打印2
+// 默认是等待态，可以转化成成功或者失败，状态更改后就不能修改状态了。
+let Promise = require('./promise.js')
+let promise = new Promise((resolve, reject) => {
+  console.log(1)
+  setTimeout(() => {
+    // resolve(123)
+    reject(456)
+  }, 1000)
+})
+console.log(2)
+promise.then((value) => {
+  console.log('success', value)
+}, (reason) => {
+  console.log('fail', reason)
+})
+```
+
+##### 实现异步的promise
+
+```
+class Promise {
+  constructor(executor) {
+    this.status = 'pending'
+    this.value;
+    this.reason;
+    this.resolveCallbacks = [] // 当then是pending时，我们希望把成功的方法都存放在数组中
+    this.rejectCallbacks = []
+    let resolve = (value) => {
+      if (this.status == 'pending') {
+        this.status = 'fulfilled'
+        this.value = value
+        // 类似发布
+        this.resolveCallbacks.forEach(fn => fn())
+      }
+    }
+    let reject = (reason) => {
+      if (this.status == 'pending') {
+        this.status = 'rejected'
+        this.reason = reason
+        this.rejectCallbacks.forEach(fn => fn())
+      }
+    }
+    executor(resolve, reject)
+  }
+  then (onFulfilled, onRejected) {
+    if (this.status == 'fulfilled') {
+      onFulfilled(this.value)
+    } else if (this.status == 'rejected') {
+      onRejected(this.reason)
+    } else if (this.status == 'pending') {
+      // 把成功的回调和失败的回调分开存放（类似订阅）
+      this.resolveCallbacks.push(() => {
+        onFulfilled(this.value)
+      })
+      this.rejectCallbacks.push(() => {
+        onRejected(this.reason)
+      })
+    }
+  }
+}
+module.exports = Promise
+```
