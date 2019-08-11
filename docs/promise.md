@@ -123,3 +123,4 @@ class Promise {
 }
 module.exports = Promise
 ```
+##### promise链式调用
