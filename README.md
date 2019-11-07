@@ -17,6 +17,8 @@
 
  [promise](docs/promise.md)
 
+ [generator](docs/generator.md)
+
  [观察者模式](docs/observer.md)
 
  [发布订阅](docs/publish-subscribe.md)
