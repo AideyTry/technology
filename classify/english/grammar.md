@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-11-26 22:23:48
- * @LastEditTime: 2019-11-28 07:31:51
+ * @LastEditTime: 2019-11-28 23:09:38
  * @LastEditors: DaiLinBo
  * @Description: This is grammar
  -->
@@ -40,3 +40,19 @@
 ###### 反意疑问句
 ##### 祈使句
 ##### 感叹句
+
+#### 五、英文的时态
+##### 时态总体来说就是表示一个动作发生的时间和所处的状态。
+
+1|        | 一般态     |    进行态  | 完成态   | 完成进行态    |
+2| :-:    | :-:       |     :-:   | :-:     | :-:         | 
+3|  现在   | 一般现在时 | 现在进行时  |现在完成时 |现在完成进行时 |
+4|  过去   |一般过去时  | 过去进行时  |过去完成时 |过去完成进行时 |
+5|  将来   |一般将来时  | 将来进行时  |将来完成时 |将来完成进行时 |
+
+##### 现在进行时：表示说话当下正在发生的动作
+###### be(am/is/are) + doing    I am watching TV right now.
+##### 过去进行时：表示过去某个时刻正在进行的动作
+###### be(was/were) + doing     They were drinking coffee when I came in.
+##### 将来进行时：表示将来某一时刻或某一阶段内将要处于进行状态的动作。
+###### will be + doing        I will be watching TV at this tommorrow morning.
