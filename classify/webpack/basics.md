@@ -3,7 +3,7 @@
  * @Author: dailinbo
  * @Date: 2019-12-07 09:14:49
  * @LastEditors: dailinbo
- * @LastEditTime: 2019-12-16 14:08:25
+ * @LastEditTime: 2019-12-16 14:29:35
  -->
 ## Webpack基础
 ### 1、什么是Webpack
@@ -40,9 +40,9 @@
 #### "webpack-dev-server --open" // 启动服务器后自动打开浏览器
 
 ### 5、支持加载css文件
-    * test: 匹配处理文件的扩展名的正则表达式
-    * use: loader名称，就是你要使用的模块的名称
-    * include/exclude: 手动指定必须处理的文件夹或屏蔽不需要处理的文件夹
-    * query： 为loaders提供额外的选项。
+ * test: 匹配处理文件的扩展名的正则表达式
+ * use: loader名称，就是你要使用的模块的名称
+ * include/exclude: 手动指定必须处理的文件夹或屏蔽不需要处理的文件夹
+ * query： 为loaders提供额外的选项。
 #### loader 在webpack中进行单一执行原则，一个loader只做一件事情
 #### 什么是loader?通过使用loader,webpack可以把不同的文件都转换成js文件，
