@@ -1,8 +1,8 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-12-13 22:02:31
- * @LastEditTime: 2019-12-13 22:44:04
- * @LastEditors: DaiLinBo
+ * @LastEditTime : 2019-12-24 23:29:14
+ * @LastEditors  : DaiLinBo
  * @Description: 
  -->
 # Daily Actions 日常行为
@@ -37,3 +37,19 @@
 
 ## It is nice to meet you.
 ## Nice to meet you.
+
+## People & Countries
+### person  通常指一个人
+### people  指多个人
+### 指示代词   this   that   these（这些）  those（那些）
+### This man's name is Dan.
+### 名词所有格：名词后加‘s来表示所属关系，构成法：名词词尾加's. Lisa's book.  This boy's chair.
+### Tina and Lisa's room. Tina和Lisa（共用）的房间
+### Tina's and Lisa's rooms. Tina 和 Lisa各自的房间
+### the girl's room.这个女孩子的房间
+### the girls' room. 女孩子们的房间
+### Here are two people.  Their names are Dan and Tina.
+## Here are three countries.
+
+## vacabulary
+### elevator clock  watch hand
