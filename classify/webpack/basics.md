@@ -2,8 +2,8 @@
  * @Description: This is Webpack Basic.
  * @Author: dailinbo
  * @Date: 2019-12-07 09:14:49
- * @LastEditors: dailinbo
- * @LastEditTime: 2019-12-16 14:29:35
+ * @LastEditors  : dailinbo
+ * @LastEditTime : 2019-12-26 10:26:40
  -->
 ## Webpack基础
 ### 1、什么是Webpack
@@ -46,3 +46,30 @@
  * query： 为loaders提供额外的选项。
 #### loader 在webpack中进行单一执行原则，一个loader只做一件事情
 #### 什么是loader?通过使用loader,webpack可以把不同的文件都转换成js文件，
+
+### 6、文件的处理
+#### file-loader 文件加载的loader,文件包括图片、图标、字体等,相当于把文件拷贝过去返回一个新的路径。
+#### ulr-loader  在file-loader基础上做的扩展
+
+### 7、打包前先清空dist目录
+#### clean-webpack-plugin
+
+### 8、分离css
+#### 因为css的下载和js可以并行（Chrome浏览器可以并行下载多个资源），当一个html文件很大的时候，我们可以把css单独提取出来加载，这样来提高速度。
+#### 使用插件mini-css-extract-plugin,会收集所有的css文件
+
+### 9、压缩css和js
+#### 压缩js的terser-webpack-plugin(unlifyjs-webpack-plugin不支持es6) 和 压缩css的optimize-css-assets-webpack-plugin
+
+### css和image存放单独目录
+
+### 10、文件指纹
+#### 打包后输出的文件和后缀
+#### hash代表本次的编译，每当编译一次，hash会变，所有的产出的资源hash都一样。
+#### chunkhash，本次代码块的hash,哪个代码块文件发生了变化，hash值才会改变
+#### contenthash, 内容hash,只要模块内容未发生变化则hash值不会变化
+
+### 11、在html中使用图片
+#### html-withimg-loader
+
+### 包前面带@的含义：类型的声明，单独留的一个仓库，代表一类库。
