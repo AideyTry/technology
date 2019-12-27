@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-11-26 22:23:48
- * @LastEditTime: 2019-11-28 23:15:14
+ * @LastEditTime: 2019-12-17 22:55:15
  * @LastEditors: DaiLinBo
  * @Description: This is grammar
  -->
@@ -56,3 +56,8 @@
 ###### be(was/were) + doing     They were drinking coffee when I came in.
 ##### 将来进行时：表示将来某一时刻或某一阶段内将要处于进行状态的动作。
 ###### will be + doing        I will be watching TV at this tommorrow morning.
+
+#### 一般态
+#### 一般现在时
+#### 一般过去时
+#### 一般将来时
