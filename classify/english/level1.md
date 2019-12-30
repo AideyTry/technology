@@ -1,8 +1,8 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-12-13 22:02:31
- * @LastEditTime : 2019-12-24 23:29:14
- * @LastEditors  : DaiLinBo
+ * @LastEditTime : 2019-12-30 19:25:43
+ * @LastEditors  : dailinbo
  * @Description: 
  -->
 # Daily Actions 日常行为
@@ -53,3 +53,15 @@
 
 ## vacabulary
 ### elevator clock  watch hand
+
+### Nationality
+### Where are you from?/Where do you come from?
+### nation和country区别；  nation强调民族、国家；  country强调国土、疆域； United Nation 联合国
+### the US  the United States    state: 洲、邦      US-China relations中美关系
+### American 美国的；来自美国的; His's an American.
+### China    be from = come from    Chinese 中国的；来自中国的；
+### He doesn't come from the US. He is Canadian.    Canada
+### Lisa comes from the US.  She and Dan come from the US.
+### in + 地点：表示在某个地方 Shanghai is  city in China.
+# 国家国际
+    
