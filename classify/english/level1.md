@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-12-13 22:02:31
- * @LastEditTime : 2019-12-30 19:25:43
+ * @LastEditTime : 2019-12-30 19:29:29
  * @LastEditors  : dailinbo
  * @Description: 
  -->
@@ -69,7 +69,6 @@
 ## vacabulary
 ### elevator clock  watch hand
 
-<<<<<<< HEAD
 ### Nationality
 ### Where are you from?/Where do you come from?
 ### nation和country区别；  nation强调民族、国家；  country强调国土、疆域； United Nation 联合国
@@ -81,7 +80,6 @@
 ### in + 地点：表示在某个地方 Shanghai is  city in China.
 # 国家国际
     
-=======
 ## 祈使句：通常用于表达命令、请求或者禁止等句子。特点一：没有任何人称；特点二：动词原形，时态是一般现在时。
 ### 祈使句的否定形式：Don't + 动词原形。Don't pick up the keys.
 ### Let's 引导的祈使句： Let's + 动词原形    Let's = Let us; Let's + not + 动词原形
@@ -95,4 +93,3 @@
 ### 特殊疑问句三种结构
 #### Be动词的特殊疑问句：特殊疑问词 + be + 其他成分。 What is your name? Who are you? Where is the Bund?外滩怎么走？
 
->>>>>>> 4317da427b2f30b8c75e8cd64955e67702803ac0
