@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-12-13 22:02:31
- * @LastEditTime : 2019-12-30 19:29:29
+ * @LastEditTime : 2020-01-08 19:15:04
  * @LastEditors  : dailinbo
  * @Description: 
  -->
@@ -92,4 +92,17 @@
 ### 以特殊疑问词开头的疑问句就是特殊疑问句。特殊疑问词：五个W + 一个H； How、When、Where、Who、What、How
 ### 特殊疑问句三种结构
 #### Be动词的特殊疑问句：特殊疑问词 + be + 其他成分。 What is your name? Who are you? Where is the Bund?外滩怎么走？
+
+### write 写
+### study science/math/medicine
+### line 排、列
+### stand in a line站成一排    stand in line排队
+### sit in a ricle 
+### good night 晚安（告别）
+### Do you know that man over there? I don't konw who he is.
+
+
+## like doing sth喜欢做某事
+### live there/here
+
 
