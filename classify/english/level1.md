@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-12-13 22:02:31
- * @LastEditTime : 2020-01-08 19:15:04
+ * @LastEditTime : 2020-01-13 20:41:50
  * @LastEditors  : dailinbo
  * @Description: 
  -->
@@ -105,4 +105,32 @@
 ## like doing sth喜欢做某事
 ### live there/here
 
+## The Harris Family
+### first name: 名字  last name:姓
+### family
+#### 1.家庭  This is his family.
+#### 2.家庭成员 These are his family.
+#### parents
+##### His father's name is Paul.   His mother's name is Kathy.
+#### brother
+#### sister 姐妹
+#### grandparents 爷爷奶奶/外公外婆    grandfather/grandmother
+##### His grandfather is 65 years old.   His grandmother is 62 years old.
+### dead
+#### die -> died（过去式）
+### live with... 和...住在一起
+#### I live with my sister.
 
+## Vocabulary
+### It's + 时间段
+#### morning/noon/afternoon     It's morning
+### day time 白天    night time 晚上
+### We see with our eyes.
+### ear hear
+### nose
+### mell   v.闻    n.气味
+### mouth   We eat with our mouth.
+### touch触摸    thing
+
+## 分数的表达  先说分子，再说分母
+### 分子：
