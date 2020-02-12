@@ -1,8 +1,13 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-12-13 22:02:31
- * @LastEditTime : 2020-02-13 00:52:32
+<<<<<<< HEAD
+ * @LastEditTime : 2020-02-13 00:54:01
  * @LastEditors  : DaiLinBo
+=======
+ * @LastEditTime : 2020-01-13 20:41:50
+ * @LastEditors  : dailinbo
+>>>>>>> 561faeb4a600612287bdd98dc40692487bfcf90a
  * @Description: 
  -->
  ## 学英语准备
@@ -69,6 +74,17 @@
 ## vacabulary
 ### elevator clock  watch hand
 
+### Nationality
+### Where are you from?/Where do you come from?
+### nation和country区别；  nation强调民族、国家；  country强调国土、疆域； United Nation 联合国
+### the US  the United States    state: 洲、邦      US-China relations中美关系
+### American 美国的；来自美国的; His's an American.
+### China    be from = come from    Chinese 中国的；来自中国的；
+### He doesn't come from the US. He is Canadian.    Canada
+### Lisa comes from the US.  She and Dan come from the US.
+### in + 地点：表示在某个地方 Shanghai is  city in China.
+# 国家国际
+    
 ## 祈使句：通常用于表达命令、请求或者禁止等句子。特点一：没有任何人称；特点二：动词原形，时态是一般现在时。
 ### 祈使句的否定形式：Don't + 动词原形。Don't pick up the keys.
 ### Let's 引导的祈使句： Let's + 动词原形    Let's = Let us; Let's + not + 动词原形
@@ -125,3 +141,44 @@
 ### during 在...的期间
 ### during the day在整个白天期间
 ### night time夜晚 It's dark at night.
+### write 写
+### study science/math/medicine
+### line 排、列
+### stand in a line站成一排    stand in line排队
+### sit in a ricle 
+### good night 晚安（告别）
+### Do you know that man over there? I don't konw who he is.
+
+
+## like doing sth喜欢做某事
+### live there/here
+
+## The Harris Family
+### first name: 名字  last name:姓
+### family
+#### 1.家庭  This is his family.
+#### 2.家庭成员 These are his family.
+#### parents
+##### His father's name is Paul.   His mother's name is Kathy.
+#### brother
+#### sister 姐妹
+#### grandparents 爷爷奶奶/外公外婆    grandfather/grandmother
+##### His grandfather is 65 years old.   His grandmother is 62 years old.
+### dead
+#### die -> died（过去式）
+### live with... 和...住在一起
+#### I live with my sister.
+
+## Vocabulary
+### It's + 时间段
+#### morning/noon/afternoon     It's morning
+### day time 白天    night time 晚上
+### We see with our eyes.
+### ear hear
+### nose
+### mell   v.闻    n.气味
+### mouth   We eat with our mouth.
+### touch触摸    thing
+
+## 分数的表达  先说分子，再说分母
+### 分子：
