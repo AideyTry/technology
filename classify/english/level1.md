@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-12-13 22:02:31
- * @LastEditTime : 2019-12-24 23:29:14
+ * @LastEditTime : 2020-02-13 00:52:32
  * @LastEditors  : DaiLinBo
  * @Description: 
  -->
@@ -82,3 +82,46 @@
 ### 特殊疑问句三种结构
 #### Be动词的特殊疑问句：特殊疑问词 + be + 其他成分。 What is your name? Who are you? Where is the Bund?外滩怎么走？
 
+## Unit 2 Part4
+### the UK 英国
+### Tokyou is in Japan 东京在日本  介词in表示方位
+### Chinese    Mandarin 普通话     Cantonese粤语
+### There be句型 表示有   There + be + 某人/物 + 某地
+#### There are many countries in Europe.
+#### There is a girl and three boys in the room.
+### All 全部，都（三者或三者以上）  both两者都
+#### France, Italy and Germany are all in Europe.
+### these 这些 this的复数
+#### People in these countries speak different languages.这些国家的人说不同的语言。
+### The French 法国人  the + 复数名词表示某国人总称
+#### The Canadians and the Americans speak English.加拿大人和美国人说英语。
+#### Germany德国   German 德国人 
+### second language 第二语言  English is their second language.
+### two languages 两门语言   Many people can speak two languages.
+### now 现在     right now 现在，此刻
+### Right now you are studying English.
+### 现在进行时： 主语 + be动词 + 动词ing形式 + 其他成分
+### Now I am teaching you English.
+### North 北    North America 北美洲
+#### Canada, the US and Mexico are all in North America.加拿大、美国、墨西哥都在北美洲
+### 描述的对象之间没有包含、从属的关系  be + 方位词 + of
+#### Canada is north of the US. 加拿大在美国的北边。
+### 描述的对象之间有包含、从属的关系  be in the + 方位词 + of
+#### shanghai is in the east of China.
+###  a school
+### at school. 在学校
+#### Students study at school. 学生在学校学习。
+### apartment公寓   building 大楼   an apartment building一栋公寓大楼
+#### An apartment building has many apartments.一整栋公寓楼里面有许多间公寓。
+### a sidewalk 人行道
+#### People walk on a sidewalk. 人们走在人行道上。
+### a street
+#### People drive cars on a street. 人们在街上开车。
+### get up 起床
+### drink喝  drink water 喝水
+### have 吃（后面可以接吃的&喝的）
+### dinner晚饭，正餐   supper晚饭
+### day time白天
+### during 在...的期间
+### during the day在整个白天期间
+### night time夜晚 It's dark at night.
