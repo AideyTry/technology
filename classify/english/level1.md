@@ -1,13 +1,8 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-12-13 22:02:31
-<<<<<<< HEAD
- * @LastEditTime : 2020-02-13 00:54:01
+ * @LastEditTime : 2020-02-13 14:12:20
  * @LastEditors  : DaiLinBo
-=======
- * @LastEditTime : 2020-01-13 20:41:50
- * @LastEditors  : dailinbo
->>>>>>> 561faeb4a600612287bdd98dc40692487bfcf90a
  * @Description: 
  -->
  ## 学英语准备
@@ -182,3 +177,37 @@
 
 ## 分数的表达  先说分子，再说分母
 ### 分子：
+### 
+
+## 18. Unit 2 Part 4
+### yellow light 黄灯
+### white 白色，白人    
+### black sheep 害群之马，败类
+### I feel so blue today.我今天觉得很沮丧。
+### My father is a big man. 我的父亲是一个大块头
+### tall and thin
+### short and heavy   heavy形容胖，fat是带有贬义的，没有礼貌的
+### 弱读，在英语句子中，实词一般是重读，虚词（冠词、人称代词、be动词、助动词、介词、连词等）弱读。例如，and弱读。
+### dialogue
+#### Go ahead 没问题(用于同意对方请求)
+##### Can we start? Yes, go ahead.
+#### Do you have a family? 你成家了吗？ Yes, I do. I have a wife and two children.
+#### What about... ?
+##### 1、用来询问消息，意思为“...怎么样？”
+###### What about your children? 你孩子怎么样？
+###### I'm from Beijing. What about you?我是北京人，你呢？
+##### 2、用来向对方提出建议或请求
+###### What about going out for a walk? 出去散个步怎么样？
+###### What about Japanese food? 吃日料怎么样？
+#### What do you do ? = What's your job?  I'm a pilot.
+#### What does Dan do? 三单形式
+#### fly
+#### several 几个，数个， several books. 几本书   several hours.几个小时
+#### What languages do you speak? I can speak several languages.
+#### a little 修饰形容词 一点儿，少量； 修饰副词稍微；略微
+
+#### 非正式场合如何回复谢谢
+##### 1、You're welcome
+##### 2、No problem
+##### 3、It's OK
+##### 4、My pleasure. 我的荣幸
