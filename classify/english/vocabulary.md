@@ -14,3 +14,15 @@
   | it        | its          |  it      |
   | we        | our          |  us      |
   | they      | their        |  them    |
+
+  ### Africa 非洲
+  ### Asia 亚洲
+  ### circle
+  ### ear
+  ### east
+  ### Egypt 埃及
+  ### elevator
+  ### eleven
+  ### eraser
+  ### go in, go up, go down
+  ### put up
