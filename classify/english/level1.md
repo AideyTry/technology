@@ -1,12 +1,21 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-12-13 22:02:31
- * @LastEditTime : 2020-02-13 14:12:20
+ * @LastEditTime : 2020-02-16 14:10:22
  * @LastEditors  : DaiLinBo
  * @Description: 
  -->
  ## 学英语准备
  ### OKR  目标与关键成果法   1、设立目标 lever-5 2、为了这个目标要执行哪些动作   3、推动执行这些动作 4、定期回顾，总结学习过程中的收获
+ #### 1、语块记忆，听原音，录音。
+ #### 2、图标辅助记忆，借助图标，脱离对文本的依赖
+ #### 3、碎片化学习
+ #### 五步学习法
+ ##### 1、Preview 预习，泛听，学一遍就可以了
+ ##### 2、Comprehension 求助于助教，扫清理解障碍，形成长期记忆；查词典
+ ##### 3、Focused Practice 精听精读阶段，每句话集中注意力听三遍说三遍
+ ##### 4、Review 学完一个Unit后复习阶段，注重锻炼段落的复述能力。比较高的频率去复习之前学过的内容。
+ ##### 5、Intermittent Review间歇性复习，学完一个level后复习阶段，注重锻炼语言运用能力，提炼句型，描述自己类似经历，迁移到生活中。
  ## 误区
  ### 先完成再完美，先通关，再回头刷星星
  ### 学习时间安排：每天两节新课
@@ -211,3 +220,70 @@
 ##### 2、No problem
 ##### 3、It's OK
 ##### 4、My pleasure. 我的荣幸
+
+## 18 Wait for elevator
+### No wonder ...难怪
+#### No wonder your english is so good!
+### 今日总结 /w/  /j/
+#### wait 
+#### yellow
+#### wonder
+#### year
+
+
+# Unit 1 Part 1
+### Name & Gender
+#### Gender 性别
+#### This 
+### 时态：描述不同时间发生的事需要用到不同的时态。 
+####一般现在时：普通、常见 描述现在的事情
+##### 1、通常用来描述常见的反复发生的事情
+###### I get up at 7 every day.
+##### 2、描述是既定事实的事情
+###### The sky is blue.  This is Dan.
+#### be    am    is    are
+### 不定冠词：指某类特定事物中随机的一个，具体是哪个不重要。  a     This is a book.
+### woman   man    boy  girl
+#### daddy's little girl.  爸爸的小棉袄
+##### I am daddy's little girl.
+##### You will always be daddy's little girl.? 一般现在时用动地原形？
+### person多指一个人
+### people 两个以上的人
+### Daily Objects 日常物品
+#### daily  adj.日常的  daily life日常生活； n.日报： CHINADAILY中国日报
+#### object n.物体，物品     daily  object
+##### a door    a window     
+###### When God closes a door, he opens a window.当上帝关上一扇门的时候，他会打开一扇窗。
+##### a chair        stairs
+#### this -> these这些
+##### 1、指代距离比较近的人或物品
+##### 2、引出接下来说要做的事情
+###### This is important. 这事很重要 
+#### that -> those那些
+###### 1、指代距离比较远的人或物品
+###### 2、指已经提到过的事
+###### That's right! 没错
+#### 应用句型
+##### This is a chair. These are chairs.
+#### table vs desk
+##### table：桌子的总称
+##### desk: 有抽屉，用来学习办公的书桌，范围比table小。
+##### deskmate 同桌， Ben is my deskmate.
+#### a pencil
+#### an eraser 一块橡皮
+#### a cell phone/ a mobile phone    China Mobile
+#### a pen 
+
+# 答疑01
+## OKR（Objectives and Key Results）目标与关键点成果法
+### 1、计划
+### 2、定期复习
+### 3、先完成再完美
+### 4、学习时间安排  不能拖延，碎片化时间，一有空就打开app。
+### 5、散步学习法： （1）先通关，（2）精听，理解句子结构，听三遍左右，可以不用录音，不懂的可以求助老师； （3）听三遍原音，再三遍自己的录音，长句子先分几次描述，再完整的描述。 每天至少两节新课的进度。
+### 6、单词记不住：不会的单词和句子记在笔记上或者截图保存在手机相册。
+### 7、听不懂  生词、连读。要多听，有层次的去听，先听大概，记下模糊的部分，再去看模糊的地方，把生词和例句过一遍，回过头再听。连读听不出的情况，先根据语境猜意思，再脑海中想句子通顺否，再查，实在不行最后再查看。
+### 8、听不懂的录频给老师让老师帮助讲解。
+### 9、复述得不到高分？如果背不下来也要非常熟悉，要多听几遍原音，分部分尝试复述。模仿原音。
+### 10、两天清理一次错题。
+
