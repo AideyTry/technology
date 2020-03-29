@@ -26,3 +26,18 @@
   ### eraser
   ### go in, go up, go down
   ### put up
+  ### fingers 
+  ### France
+  ### February 二月
+  ### Germany
+  ### goat n.
+  ### ink  墨水
+  ### India 印度
+  ### Ireland
+  ### Italy
+  ### jeans
+  ### juice
+  ### june
+  ### july
+  ### twelve
+  ### Be quiet 安静
