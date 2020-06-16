@@ -1,14 +1,17 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-08-04 23:50:40
- * @LastEditTime: 2019-11-24 10:33:11
+ * @LastEditTime: 2020-06-14 17:30:35
  * @LastEditors: DaiLinBo
  * @Description: 
  -->
 
 技术总结文档归纳
 ## 目录
- [Learing English](docs/learing-English.md)
+
+  [JavaScript原理](docs/javascript.md)
+
+  [算法](docs/arithmetic.md)
 
  [移动web](docs/mobile-web.md)
 
@@ -29,3 +32,5 @@
  [连接Linux](docs/connect.md)
 
  [高阶函数](docs/highFun.md)
+
+  [Learing English](docs/learing-English.md)
