@@ -1,16 +1,16 @@
 /*
  * @Author: DaiLinBo
  * @Date: 2020-07-01 11:08:30
- * @LastEditTime: 2020-07-01 11:26:14
+ * @LastEditTime: 2020-07-01 12:29:40
  * @LastEditors: DaiLinBo
  * @Description: This is queue of data structure.
  */
 
 class Queue {
   constructor(max) {
-    this.max = maxt;
+    this.max = max;
     this.data = new Array(max);
-    this.head = -1;
+    this.head = 0;
     this.tail = 0;
     this.size = 0
   }
@@ -39,12 +39,13 @@ class Queue {
     if(this.size === 0){
       throw 'underflow'
     }
+    this.size --
     const x = this.data[this.head];
     this.head++;
     return x;
   }
   get length(){
-    return top + 1
+    return this.size
   }
 }
 
