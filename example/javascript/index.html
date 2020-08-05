@@ -1,0 +1,55 @@
+<!--
+ * @Author: DaiLinBo
+ * @Date: 2020-07-15 13:27:12
+ * @LastEditTime: 2020-07-22 10:49:48
+ * @LastEditors: DaiLinBo
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>hahahfdsfsa</div>
+    <!-- <script src="./common/class.js"></script> -->
+    <script>
+      const friends = [
+        {name: 'zs', age: 20},
+        {name: 'ls', age: 30},
+        {name: 'ww', age: 40},
+        {name: 'zl', age: 10},
+      ]
+      console.log('sort after=', friends.sort((a,b) => {
+        console.log('a,b=', a,b)
+        return a.age - b.age
+      }))
+
+      const names = ['Ana', 'ana', 'aiden', 'Aiden', 'Jason', 'jason', '123', '2', '5','80','9', '33','55','6','90','320']
+      console.log('name==', names.sort((a, b) => {
+        if(a.toLocaleLowerCase() < b.toLocaleLowerCase()){
+          return -1
+        }
+        if(a.toLocaleLowerCase() > b.toLocaleLowerCase()){
+          return 1
+        }
+        return 0
+      }))
+
+      console.log('sort====', names.sort((a, b) => b.localeCompare(a)))
+
+
+      let length = 5
+      let int16 = new Int16Array(length)
+      let arrary16 = []
+      arrary16.length = length
+      for(let i = 0; i < length; i++){
+        int16[i] = i + 1
+      }
+      console.log('int16=', int16)
+    </script>
+  </body>
+</html>

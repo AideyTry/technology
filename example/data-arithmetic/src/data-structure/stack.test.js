@@ -1,13 +1,13 @@
 /*
  * @Author: DaiLinBo
  * @Date: 2020-06-29 23:26:02
- * @LastEditTime: 2020-06-30 12:18:57
+ * @LastEditTime: 2020-07-27 15:32:56
  * @LastEditors: DaiLinBo
  * @Description: This is the test case of Stack.
  */
 
 const { assert } = require("chai");
-const Stack = require('./stack')
+const Stack = require('./stack-object')
 
 describe('test stack', () => {
   it('LIFO', () => {
