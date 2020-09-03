@@ -1,11 +1,12 @@
 /*
  * @Author: Aiden
  * @Date: 2020-09-03 10:38:21
- * @LastEditTime: 2020-09-03 18:00:36
+ * @LastEditTime: 2020-09-03 18:09:08
  * @LastEditors: Aiden
  * @Description:
  */
 require("./index.less");
+import "@babel/polyfill";
 console.log("webpack");
 const sum = () => {
   console.log(124);
@@ -38,3 +39,7 @@ async function a(){
 }
 
 a()
+
+
+const bbb = 'btn001'
+console.log('isTrue=', bbb.includes('btn'))
