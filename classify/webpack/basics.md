@@ -2,13 +2,14 @@
  * @Description: This is Webpack Basic.
  * @Author: dailinbo
  * @Date: 2019-12-07 09:14:49
- * @LastEditors  : dailinbo
- * @LastEditTime : 2019-12-26 10:26:40
+ * @LastEditors: Aiden
+ * @LastEditTime: 2020-09-03 10:35:22
  -->
 ## Webpack基础
 ### 1、什么是Webpack
-
+#### 是一个打包工具，打包成输出后的结构
 ### 2、初始化项目
+#### 安装本地的webpack  webpack-cli
 
 ### 3、快速上手
 
