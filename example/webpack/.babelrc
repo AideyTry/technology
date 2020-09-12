@@ -1,8 +1,19 @@
 {
   "presets": [
     [
-      "@babel/preset-env"
+      "@babel/preset-react"
+      // "@babel/preset-env"
     ]
   ],
-  "plugins": ["@babel/plugin-proposal-class-properties","@babel/plugin-transform-runtime"]
+  "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-transform-runtime",
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": "css"
+      },
+    ]
+  ]
 }

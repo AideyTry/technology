@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   mode: "development", // mode 两种，默认production, 可设置development
   entry: "./src/index.js", // 入口
+  devtool: 'inline-source-map',
   output: {
     filename: "bundle.js", // 打包后的文件名
     path: path.resolve(__dirname, "dist") // 路径必须是一个绝对路径，path.resolve解析路径为绝对路径
@@ -15,7 +16,7 @@ module.exports = {
     rules: [
       // 配置规则
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         // exclude: /(node_modules|bower_components)/,
         exclude: path.resolve(__dirname, "node_modules"),
         use: {
@@ -44,6 +45,18 @@ module.exports = {
           "css-loader",
           "postcss-loader",
           "less-loader" // 把less转换为css
+        ]
+      },
+      {
+        test: /\.(png|gif|jpg)$/,
+        use:[
+          {
+            loader: 'url-loader',
+            options: { // 做一个限制，当我们图标小于多少时用base64来转化，否则用file-loader产生真实的图片。
+              limit: 1,
+              // outputPath: '/img/'
+            }
+          }
         ]
       }
     ]

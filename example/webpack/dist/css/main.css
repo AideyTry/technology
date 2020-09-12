@@ -1,0 +1,13 @@
+body {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+body div {
+  border: 1px solid #0a0a0a;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background: url(/img/eb213131ec780bb8d61985bc88a6b389.jpg);
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vc3JjL2luZGV4Lmxlc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxnQ0FBd0I7VUFBeEIsd0JBQXdCO0FBQzFCO0FBQ0E7RUFDRSx5QkFBeUI7RUFDekIsZ0NBQXdCO1VBQXhCLHdCQUF3QjtFQUN4QixtREFBZ0Q7QUFDbEQiLCJmaWxlIjoiY3NzL21haW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIHRyYW5zZm9ybTogcm90YXRlKDQ1ZGVnKTtcbn1cbmJvZHkgZGl2IHtcbiAgYm9yZGVyOiAxcHggc29saWQgIzBhMGEwYTtcbiAgdHJhbnNmb3JtOiByb3RhdGUoNDVkZWcpO1xuICBiYWNrZ3JvdW5kOiB1cmwoJy4uL2Fzc2V0cy9pbWFnZXMvZm9vdGJhbGwuanBnJyk7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9*/
