@@ -1,8 +1,8 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-08-04 23:50:40
- * @LastEditTime: 2020-06-19 00:57:52
- * @LastEditors: DaiLinBo
+ * @LastEditTime: 2020-09-25 11:14:10
+ * @LastEditors: Aiden
  * @Description: 
  -->
 
@@ -19,6 +19,8 @@
  [React](docs/react.md)
 
  [webpack篇](docs/webpack.md)
+
+ [Typescript](docs/typescript.md)
 
  [promise](docs/promise.md)
 
