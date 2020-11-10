@@ -1,10 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import Hello from './components/Hello'
+import Hello from "./components/Hello";
+import useMousePosition from "./components/hooks/useMousePosition";
 
 function App() {
+  const positions = useMousePosition();
   return (
     <div className="App">
       <header className="App-header">
@@ -12,7 +14,10 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <Hello message={123}></Hello>
+        <p>
+          X:{positions.x} Y:{positions.y}
+        </p>
+        <Hello message={"123"}></Hello>
       </header>
     </div>
   );
