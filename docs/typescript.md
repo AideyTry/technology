@@ -1,8 +1,8 @@
 <!--
  * @Author: Aiden
  * @Date: 2020-09-25 11:14:20
- * @LastEditTime: 2020-10-28 11:18:23
- * @LastEditors: Aiden
+ * @LastEditTime: 2020-11-11 17:30:10
+ * @LastEditors: Please set LastEditors
  * @Description: 
 -->
 ## 编程语言的类型
@@ -85,7 +85,7 @@ let user: Person = {
 
 ## enums
 
-## 泛型
+## 泛型(Generics)
 ### 在使用时定义类型的一种特征
 
 ## 类型别名和类型断言
