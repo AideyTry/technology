@@ -3,7 +3,7 @@
  * @Author: dailinbo
  * @Date: 2019-11-26 09:32:59
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2020-11-10 17:16:27
+ * @LastEditTime: 2020-11-13 09:57:18
  -->
 ### 纯函数概念
 #### 函数不会修改入参，多次调用下相同的入参始终返回相同的结果，例：
@@ -69,3 +69,17 @@ state是私有的，完全受控于当前的组件，state是可以发生变化�
 1、需要无端的添加界面结构；
 2、难以理解；
 ```
+
+##### useRef
+###### 修改ref值不会改变组件重新render
+###### 访问dom节点
+
+##### useContext
+###### 解决多层次传递属性
+
+##### Hook规则
+###### 1、只在最顶层使用hook,不要在循环、条件或者嵌套函数中使用hook
+###### 2、只在React函数中调用hook
+
+##### 其他hook
+###### useReducer、useCallback、

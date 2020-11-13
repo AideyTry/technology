@@ -1,8 +1,8 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-08-04 23:50:40
- * @LastEditTime: 2020-09-25 11:14:10
- * @LastEditors: Aiden
+ * @LastEditTime: 2020-11-12 11:05:23
+ * @LastEditors: Please set LastEditors
  * @Description: 
  -->
 
@@ -35,5 +35,7 @@
  [连接Linux](docs/connect.md)
 
  [高阶函数](docs/highFun.md)
+
+ [前端组件库](docs/libraries.md)
 
   [Learing English](docs/learing-English.md)

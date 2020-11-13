@@ -4,26 +4,29 @@ import "./App.css";
 
 import Hello from "./components/Hello";
 // import useMousePosition from "./components/hooks/useMousePosition";
-import withLoader from "./components/HOC/withLoader";
+// import withLoader from "./components/HOC/withLoader";
+import useURLLoader from './components/hooks/useURLLoader'
 
 interface IShowResult {
   name: string;
   age: string;
 }
-const LoadingShow: React.FC<{ data: IShowResult }> = ({ data }) => {
-  console.log('data==========', data)
-  return (
-    <>
-      <h2>Show Content</h2>
-      <strong>name: </strong>
-      <span>{data.name}</span>
-    </>
-  );
-};
+// const LoadingShow: React.FC<{ data: IShowResult }> = ({ data }) => {
+//   console.log('data==========', data)
+//   return (
+//     <>
+//       <h2>Show Content</h2>
+//       <strong>name: </strong>
+//       <span>{data.name}</span>
+//     </>
+//   );
+// };
 
 function App() {
   // const positions = useMousePosition();
-  const NewWithLoader = withLoader(LoadingShow, "/user/info");
+  // const NewWithLoader = withLoader(LoadingShow, "/user/info");
+  const [data, loading] = useURLLoader("/user/info")
+  const resultData = data as IShowResult
   return (
     <div className="App">
       <header className="App-header">
@@ -36,7 +39,8 @@ function App() {
         </p> */}
         <Hello message={"123"}></Hello>
       </header>
-      <NewWithLoader />
+      {/* <NewWithLoader /> */}
+      {loading ? <p>加载中...</p> : <p><strong>name: </strong><span>{resultData && resultData.name}</span></p>}
     </div>
   );
 }
