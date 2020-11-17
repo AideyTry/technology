@@ -25,7 +25,7 @@ src/
             style.scss(组件单独的样式)
     styles/
         _variables.scss(各种变量以及可配置设置)
-        _mixins.scss(全局mixins)
+        _mixins.scss(全局mixins) // 解决css代码重用问题
         _functions.scss(全局functions)
     index.tsx // 默认的入口文件，把所有的模块导出
 ```
@@ -57,3 +57,11 @@ ESLint代码检测
 ### 按钮
 ### 边框和阴影
 ### 可配置开关
+
+
+## Button组件需求分析
+```bash
+不同的Button Type
+不同的Button Size
+Disabled状态
+```
