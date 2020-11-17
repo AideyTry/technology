@@ -12,9 +12,12 @@ function App() {
         </p>
       </header>
       <Button>Call me!</Button>
+      <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>Big</Button>
       <Button disabled>Disabled</Button>
-      <Button btnType={ButtonType.Primary} size={ButtonSize.Small}> Hello </Button>
+      <Button btnType={ButtonType.Primary} size={ButtonSize.Small}> Small </Button>
+      <Button btnType={ButtonType.Danger} size={ButtonSize.Large}> Danger </Button>
       <Button btnType={ButtonType.Link} href="https://www.baidu.com"> href </Button>
+      <Button btnType={ButtonType.Link} disabled href="https://www.baidu.com"> baidu </Button>
     </div>
   );
 }

@@ -1,5 +1,11 @@
-@import './_variables.scss';
+// config
+@import './_variables';
 
-@import './_reboot.scss';
+// layout
+@import './_reboot';
 
+// mixin
+@import './mixin';
+
+// button
 @import '../components/Button/style'
