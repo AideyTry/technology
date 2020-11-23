@@ -11,7 +11,7 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
       </header>
-      <Button>Call me!</Button>
+      <Button onClick={() => {alert(111)}}>Call me!</Button>
       <Button btnType={ButtonType.Primary} size={ButtonSize.Large}>Big</Button>
       <Button disabled>Disabled</Button>
       <Button btnType={ButtonType.Primary} size={ButtonSize.Small}> Small </Button>

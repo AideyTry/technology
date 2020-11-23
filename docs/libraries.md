@@ -65,3 +65,24 @@ ESLint代码检测
 不同的Button Size
 Disabled状态
 ```
+
+## 测试金字塔
+### 会有很多的Unit Test,一些Service Test,很少的UI Test
+### 金字塔越往上用时越多
+```bash
+UI
+    UI Test模拟真实用户场景，对整个应用进行测试
+Service
+   Service Test把几部分Unit Test组合起来来看它良好的工作
+Unit
+    Unit Test: 把代码分成单独的互相独立的部分，没有相互的依赖，测试每一部分都可以良好的工作
+```
+### React组件特别适合单元测试
+#### Component组件
+#### Function函数
+#### 单向数据流 单向数据流让组件不会随便随着外部传入数据变动而去改动，只是让测试触发相应的回调即可。
+
+## 测试框架Jest
+### 断言：判断一个值是否对应相应的结果
+### 每个测试用例称为一个case,case一般都会测试一个独立的功能点
+### react-testing-library
