@@ -87,3 +87,5 @@ Unit
 ### 每个测试用例称为一个case,case一般都会测试一个独立的功能点
 ### react-testing-library
 #### 按照真实的用户目标出发设计测试用例，去操作真实的dom，去查找元素上面的文本。
+#### jest-dom
+##### yarn add --dev @testing-library/jest-dom
