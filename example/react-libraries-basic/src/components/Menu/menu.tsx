@@ -12,5 +12,16 @@ export interface MenuProps{
 
 const Menu: React.FC<MenuProps> = props => {
     const { className, mode, style, children, defaultIndex } = props
-    
+    const classes = classNames('turnip-menu', className, {
+        'menu-vertical': mode === 'vertical'
+    })
+    return(<ul className={classes} style={style}>
+        {children}
+    </ul>)
 }
+Menu.defaultProps = {
+    defaultIndex: 0,
+    mode: 'horizontal',
+}
+
+export default Menu
