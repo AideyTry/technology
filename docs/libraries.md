@@ -88,4 +88,5 @@ Unit
 ### react-testing-library
 #### 按照真实的用户目标出发设计测试用例，去操作真实的dom，去查找元素上面的文本。
 #### jest-dom
+##### jest-dom添加了一些针对dom的断言，针对更快捷的dom操作
 ##### yarn add --dev @testing-library/jest-dom
