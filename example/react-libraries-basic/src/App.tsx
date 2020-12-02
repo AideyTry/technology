@@ -21,9 +21,10 @@ function App() {
       <Button btnType={ButtonType.Link} href="https://www.baidu.com"> href </Button>
       <Button btnType={ButtonType.Link} disabled href="https://www.baidu.com"> baidu </Button>
       <Menu mode="vertical" defaultIndex={0} onSelect={ index => alert(index)}>
-        <MenuItem index={0}>menu1</MenuItem>
-        <MenuItem index={1} disabled>menu2</MenuItem>
-        <MenuItem index={2}>menu3</MenuItem>
+        <MenuItem>menu1</MenuItem>
+        <MenuItem disabled>menu2</MenuItem>
+        <MenuItem>menu3</MenuItem>
+        <li>li</li>
         </Menu>
     </div>
   );
