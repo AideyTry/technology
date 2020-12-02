@@ -1,3 +1,10 @@
+<!--
+ * @Author: Aiden
+ * @Date: 2020-12-02 22:12:11
+ * @LastEditTime: 2020-12-02 23:51:53
+ * @LastEditors: Aiden
+ * @Description: 
+-->
 ## 完成一个组件库需要考虑的问题
 ### 代码结构
 ### 样式解决方案
@@ -90,3 +97,7 @@ Unit
 #### jest-dom
 ##### jest-dom添加了一些针对dom的断言，针对更快捷的dom操作
 ##### yarn add --dev @testing-library/jest-dom
+
+
+## Menu组件总结
+### React提供的组件  displayName以及方法React.cloneElement()
