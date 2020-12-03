@@ -1,8 +1,8 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-08-04 23:50:40
- * @LastEditTime: 2020-11-12 11:05:23
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-12-04 01:25:41
+ * @LastEditors: Aiden
  * @Description: 
  -->
 
@@ -37,5 +37,3 @@
  [高阶函数](docs/highFun.md)
 
  [前端组件库](docs/libraries.md)
-
-  [Learing English](docs/learing-English.md)
