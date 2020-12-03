@@ -10,6 +10,7 @@
     padding: $menu-item-padding-y $menu-item-padding-x;
     cursor: pointer;
     transition: $menu-transition;
+    border-bottom: $menu-item-active-border-width solid transparent;
     &:hover,&:focus{
       text-decoration: none;
     }
@@ -31,9 +32,45 @@
   border-right: $menu-border-width 1px $menu-border-color;
   .menu-item{
     border-left: $menu-item-active-border-width solid transparent;
+    border-bottom: $menu-item-active-border-width solid transparent;
     &.is-active, &:hover{
-      border-bottom: 0;
+      border-bottom: $menu-item-active-border-width solid transparent;
       border-left: $menu-item-active-border-width solid $menu-item-active-color;
     }
   }
+}
+
+.submenu-item{
+  position: relative;
+}
+.turnip-menu .turnip-submenu{
+  list-style: none;
+  padding-left: 0;
+  white-space: nowrap;
+}
+.turnip-menu .turnip-submenu .menu-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.menu-horizontal .turnip-submenu{
+  position: absolute;
+  background: #fff;
+  z-index: 100;
+  top: calc(100% + 8px);
+  left: 0;
+  border: 1px solid #dee2e6;
+}
+.menu-vertical .turnip-submenu .menu-item {
+  border-left: none;
+  &.is-active, &:hover{
+    border-left: none;
+    // border: none;
+  }
+}
+.menu-horizontal .turnip-submenu .menu-item{
+  border-bottom: none;
+      // box-shadow: none;
+      &.is-active, &:hover{
+        border-bottom: none;
+      }
 }

@@ -22,7 +22,8 @@ const Menu: React.FC<MenuProps> = props => {
     const { className, mode, style, children, defaultIndex, onSelect } = props
     const [currentActive, setActive] = useState(defaultIndex)
     const classes = classNames('turnip-menu', className, {
-        'menu-vertical': mode === 'vertical'
+        'menu-vertical': mode === 'vertical',
+        'menu-horizontal': mode !=='vertical'
     })
 
     const handleClick = (index: number) => {
@@ -39,7 +40,7 @@ const Menu: React.FC<MenuProps> = props => {
         return React.Children.map(children, (child, index) => {
             const childElement = child as React.FunctionComponentElement<MenuItemProps>
             const { displayName } = childElement.type
-            if(displayName === 'MenuItem'){
+            if(displayName === 'MenuItem' || displayName === 'SubMenu'){
                 return React.cloneElement(childElement, {
                     index
                 })
