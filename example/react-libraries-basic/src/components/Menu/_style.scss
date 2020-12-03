@@ -44,9 +44,13 @@
   position: relative;
 }
 .turnip-menu .turnip-submenu{
+  display: none;
   list-style: none;
   padding-left: 0;
   white-space: nowrap;
+}
+.turnip-menu .turnip-submenu.menu-opened{
+  display: block;
 }
 .turnip-menu .turnip-submenu .menu-item {
   padding: 0.5rem 1rem;

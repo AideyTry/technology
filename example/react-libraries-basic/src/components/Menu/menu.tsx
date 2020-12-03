@@ -3,18 +3,19 @@ import classNames from 'classnames'
 
 import { MenuItemProps } from './menuItem'
 
-type mode = 'vertical' | 'horizontal' | 'inline'
+type MenuMode = 'vertical' | 'horizontal' | 'inline'
 type SelectCallback = (selectIndex: number) => void
 export interface MenuProps{
     defaultIndex?: number;
     className?: string;
-    mode?: string;
+    mode?: MenuMode;
     style?: React.CSSProperties;
     onSelect?: SelectCallback;
 }
 interface IMenuContext{
     index: number;
     onSelect?: SelectCallback;
+    mode?: MenuMode;
 }
 
 export const MenuContext = createContext<IMenuContext>({index: 0})
@@ -34,7 +35,8 @@ const Menu: React.FC<MenuProps> = props => {
     }
     const passedContext:IMenuContext = {
         index: currentActive ? currentActive : 0,
-        onSelect: handleClick
+        onSelect: handleClick,
+        mode
     }
     const renderChildren = () => {
         return React.Children.map(children, (child, index) => {
