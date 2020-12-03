@@ -41,7 +41,7 @@ function App() {
         {" "}
         baidu{" "}
       </Button>
-      <Menu mode="vertical" defaultIndex={0} onSelect={index => alert(index)}>
+      <Menu defaultIndex={'0'} defaultOpenSubMenus={['3']} onSelect={index => alert(index)}>
         <MenuItem>menu1</MenuItem>
         <MenuItem disabled>menu2</MenuItem>
         <MenuItem>menu3</MenuItem>
