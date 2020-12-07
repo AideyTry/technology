@@ -1,8 +1,8 @@
 <!--
  * @Author: Aiden
  * @Date: 2020-12-02 22:12:11
- * @LastEditTime: 2020-12-02 23:51:53
- * @LastEditors: Aiden
+ * @LastEditTime: 2020-12-07 18:07:08
+ * @LastEditors: Please set LastEditors
  * @Description: 
 -->
 ## 完成一个组件库需要考虑的问题
@@ -101,3 +101,30 @@ Unit
 
 ## Menu组件总结
 ### React提供的组件  displayName以及方法React.cloneElement()
+
+## 图标
+### 雪碧图
+```bash
+劣势：不能缩放，不能使用CSS控制
+```
+### Font Icon
+```bash
+可缩放，可CSS控制
+```
+
+### SVG
+```bash
+优势：
+完全可控
+SVG即取即用，Font Icon要下载全部字体文件
+Font Icon还有很多奇怪的bug
+```
+
+### 如何实现动画
+```bash
+1、通过CSS实现
+   transform: rotate(180deg);
+2、使用react-transition-group
+当display从none变为block的时候，其他的动画属性就会失效。因为display不是一个标准的支持动画的属性。
+```
+### transition属性不会有继承
