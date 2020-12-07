@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden
  * @Date: 2020-12-02 22:12:11
- * @LastEditTime: 2020-12-07 18:07:08
+ * @LastEditTime: 2020-12-07 18:24:04
  * @LastEditors: Please set LastEditors
  * @Description: 
 -->
@@ -128,3 +128,12 @@ Font Icon还有很多奇怪的bug
 当display从none变为block的时候，其他的动画属性就会失效。因为display不是一个标准的支持动画的属性。
 ```
 ### transition属性不会有继承
+
+## create-react-app目前开发的痛点
+### 1、入口文件不适合管理组件库
+### 2、缺少行为追踪和属性调试功能
+
+## 组件完美开发工具应有的特点
+### 1、分开展示各个组件不同属性下的状态
+### 2、能追踪组件的行为并且具有属性调试功能
+### 3、可以为组件自动生成文档和属性列表
