@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden
  * @Date: 2020-12-02 22:12:11
- * @LastEditTime: 2020-12-07 18:24:04
+ * @LastEditTime: 2020-12-09 17:36:41
  * @LastEditors: Please set LastEditors
  * @Description: 
 -->
@@ -137,3 +137,11 @@ Font Icon还有很多奇怪的bug
 ### 1、分开展示各个组件不同属性下的状态
 ### 2、能追踪组件的行为并且具有属性调试功能
 ### 3、可以为组件自动生成文档和属性列表
+
+## Storybook
+### 1、安装
+```bash
+npx -p @storybook/cli sb init (会自动检测是React还是Vue框架)
+```
+### 2、Addon
+#### @storybook/addon-info   @types/storybook__addon-info
