@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden
  * @Date: 2020-12-02 22:12:11
- * @LastEditTime: 2020-12-09 17:36:41
+ * @LastEditTime: 2020-12-10 09:32:40
  * @LastEditors: Please set LastEditors
  * @Description: 
 -->
@@ -145,3 +145,4 @@ npx -p @storybook/cli sb init (会自动检测是React还是Vue框架)
 ```
 ### 2、Addon
 #### @storybook/addon-info   @types/storybook__addon-info
+#### 自动生成文档  react-docgen-typescript storybook中集成的有，但需要安装react-docgen-typescript-loader    
