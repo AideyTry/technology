@@ -1,27 +1,45 @@
 import React from 'react';
-// also exported from '@storybook/react' if you can deal with breaking changes in 6.1
-import { Story, Meta } from '@storybook/react/types-6-0';
-
-import Button, { ButtonProps, ButtonType } from './button';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import Button , { ButtonProps, ButtonType, ButtonSize } from './button';
 
 export default {
   title: 'Example/Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
+  parameters: {
+    docs: {
+      source: {
+        type: 'code'
+      }
+    }
   },
+  argTypes: {
+    size: {
+      description: 'Set the size of button',
+      default: 'sm',
+      table: {
+        type: 'string'
+      }
+    },
+    btnType: {
+      description: 'Set the type of button',
+      default: 'primary',
+      table: {
+        default: 'primary',
+        type: 'string'
+      }
+    },
+    disabled: {
+      description: 'Set show or hide of button',
+      table: {
+        default: false,
+        type: 'boolean'
+      }
+    }
+  }
 } as Meta;
 
 const Template: Story<ButtonProps> = (args) => <Button {...args}>Button</Button>;
 
-export const Primary = () => <Button btnType={ButtonType.Primary}>Primary</Button>
-
-export const Danger = Template.bind({});
-Danger.args = {
-    btnType: ButtonType.Danger
-};
-
-export const Link = Template.bind({});
-Link.args = {
-    btnType: ButtonType.Link
-};
+// Each story then reuses that template
+export const Primary = Template.bind({});
+Primary.args = { size: ButtonSize.Large, btnType:  ButtonType.Primary};
