@@ -7,6 +7,9 @@ export default {
   component: Button,
   parameters: {
     docs: {
+      description: { 
+        component: 'This is button.' 
+    },
       source: {
         type: 'code'
       }

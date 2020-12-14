@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden
  * @Date: 2020-12-02 22:12:11
- * @LastEditTime: 2020-12-10 09:32:40
+ * @LastEditTime: 2020-12-14 11:21:30
  * @LastEditors: Please set LastEditors
  * @Description: 
 -->
@@ -145,4 +145,11 @@ npx -p @storybook/cli sb init (会自动检测是React还是Vue框架)
 ```
 ### 2、Addon
 #### @storybook/addon-info   @types/storybook__addon-info
-#### 自动生成文档  react-docgen-typescript storybook中集成的有，但需要安装react-docgen-typescript-loader    
+#### 自动生成文档  react-docgen-typescript storybook中集成的有，但需要安装react-docgen-typescript-loader
+
+## input
+### 开发公共组件库需要的四部分构成
+#### 1、编写主体文件
+#### 2、样式文件
+#### 3、写测试用例
+#### 4、编写文档
