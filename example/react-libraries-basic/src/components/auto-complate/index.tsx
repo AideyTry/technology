@@ -31,7 +31,8 @@ const AutoComplate: FC<AutoCompleteProps> = (props) => {
   ]);
   const componentRef = useRef<HTMLDivElement>(null);
   const [highlightIndex, setHighlightIndex] = useState(-1);
-  useClickOutside(componentRef, () => setSugestions([]));
+  const [visible, setVisible] = useState(true)
+  useClickOutside(componentRef, () => setVisible(false));
   const renderTemplate = (item: DataSourceType) => {
     return renderOption ? renderOption(item) : item.value;
   };
@@ -69,7 +70,7 @@ const AutoComplate: FC<AutoCompleteProps> = (props) => {
   };
   const generateDropdown = () => {
     return (
-      <ul className="turnip-suggestion-list">
+      visible && <ul className="turnip-suggestion-list">
         {suggestions.map((item, index) => {
           const cnames = classNames("suggestion-item", {
             "is-active": index === highlightIndex,
