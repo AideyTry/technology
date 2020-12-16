@@ -29,6 +29,7 @@ const handleFetch = (query: string) => {
 // Each story then reuses that template
 export const DefaultAutoComplate = Template.bind({});
 DefaultAutoComplate.args = {
+  renderOption: (item) => <><strong>数据：</strong><span>{item.value}</span></>,
   onSelect: (e) => console.log(e),
   fetchSuggestions: handleFetch
 };
