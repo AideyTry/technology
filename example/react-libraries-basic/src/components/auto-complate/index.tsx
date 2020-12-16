@@ -1,7 +1,8 @@
-import React, { ChangeEvent, FC, ReactElement, useState, useRef } from "react";
+import React, { ChangeEvent, FC, ReactElement, useState, useRef, useEffect } from "react";
 import classNames from "classnames";
 import Input, { InputProps } from "../Input/input";
 import useClickOutside from "../../hooks/useClickOutside";
+import useDebounce from '../../hooks/useDebounce'
 
 interface DataSourceObject {
   value: string;
@@ -24,28 +25,51 @@ const AutoComplate: FC<AutoCompleteProps> = (props) => {
     ...restProps
   } = props;
   const [inputValue, setInputValue] = useState((value as string) || "");
-  const [suggestions, setSugestions] = useState<DataSourceType[]>([
-    { value: "333" },
-    { value: "444" },
-    { value: "666" },
-  ]);
+  const [suggestions, setSugestions] = useState<DataSourceType[]>([]);
   const componentRef = useRef<HTMLDivElement>(null);
   const [highlightIndex, setHighlightIndex] = useState(-1);
-  const [visible, setVisible] = useState(true)
-  useClickOutside(componentRef, () => setVisible(false));
+  const triggerSearch = useRef(false)
+  const [showDropdown, setShowDropdown] = useState(false)
+  const debouncedValue = useDebounce(inputValue, 300)
+
+  useClickOutside(componentRef, () => setShowDropdown(false));
+
+  useEffect(() => {
+    if(debouncedValue && triggerSearch.current){
+      setSugestions([])
+      const results = fetchSuggestions(debouncedValue)
+      if(results instanceof Promise){
+        results.then(data => {
+          setSugestions(data)
+          if(data.length > 0){
+            setShowDropdown(true)
+          }
+        })
+      } else {
+        setSugestions(results)
+        if(results.length > 0){
+          setShowDropdown(true)
+        }
+      }
+    } else {
+      setShowDropdown(false)
+    }
+    setHighlightIndex(-1)
+  }, [debouncedValue, fetchSuggestions])
   const renderTemplate = (item: DataSourceType) => {
     return renderOption ? renderOption(item) : item.value;
   };
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value.trim();
     setInputValue(val);
+    triggerSearch.current = true
   };
   const handleSelect = (item: DataSourceType) => {
-    console.log("item=====", item);
     setInputValue(item.value);
     if (onSelect) {
       onSelect(item);
     }
+    triggerSearch.current = false
   };
   const highlight = (index: number) => {
     if (index < 0) index = 0;
@@ -55,8 +79,11 @@ const AutoComplate: FC<AutoCompleteProps> = (props) => {
     setHighlightIndex(index);
   };
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    switch (e.KeyCode) {
+    switch (e.keyCode) {
       case 13:
+        if(suggestions[highlightIndex]){
+          handleSelect(suggestions[highlightIndex])
+        }
         break;
       case 38:
         highlight(highlightIndex - 1);
@@ -64,13 +91,16 @@ const AutoComplate: FC<AutoCompleteProps> = (props) => {
       case 40:
         highlight(highlightIndex + 1);
         break;
+      case 27:
+        setShowDropdown(false);
+        break;
       default:
         break;
     }
   };
   const generateDropdown = () => {
     return (
-      visible && <ul className="turnip-suggestion-list">
+      showDropdown && <ul className="turnip-suggestion-list">
         {suggestions.map((item, index) => {
           const cnames = classNames("suggestion-item", {
             "is-active": index === highlightIndex,
