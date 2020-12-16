@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden
  * @Date: 2020-12-02 22:12:11
- * @LastEditTime: 2020-12-14 11:21:30
+ * @LastEditTime: 2020-12-16 15:53:59
  * @LastEditors: Please set LastEditors
  * @Description: 
 -->
@@ -153,3 +153,11 @@ npx -p @storybook/cli sb init (会自动检测是React还是Vue框架)
 #### 2、样式文件
 #### 3、写测试用例
 #### 4、编写文档
+
+## upload
+### 网络请求axios
+### 在线的mock server
+#### JSONPlaceholder 目前elementUi在用
+#### mocky.io
+### 四种常见的 POST 提交数据方式
+#### https://www.cnblogs.com/jpfss/p/10449287.html

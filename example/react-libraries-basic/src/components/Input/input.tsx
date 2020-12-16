@@ -3,11 +3,11 @@ import classNames from "classnames";
 
 type InputSize = "lg" | "sm";
 
-export interface InputProps extends InputHTMLAttributes<HTMLElement> {
+export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>, 'size'> {
   disabled?: boolean;
   size?: InputSize;
-  prefix?: string | ReactElement;
-  suffix?: string | ReactElement;
+  prefix?: string;
+  suffix?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
@@ -18,7 +18,7 @@ export const Input: FC<InputProps> = (props) => {
   const cnames = classNames("turnip-input-wrapper", {
     [`input-size-${size}`]: size,
     "is-disabled": disabled,
-    "input-group": suffix || suffix,
+    "input-group": prefix || suffix,
     "input-group-prefix": !!prefix,
     "input-group-suffix": !!suffix,
   });
