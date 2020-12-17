@@ -3,15 +3,51 @@ import Axios from "axios";
 import Button, { ButtonType } from "../Button/button";
 
 export interface UploadProps {
-  action?: string;
+  action: string;
+  beforeUpload?: (file: File) => boolean | Promise<File>;
   onProgress?: (percentage: number, file: File) => void;
   onSuccess?: (data: any, file: File) => void;
   onError?: (err: any, file: File) => void;
+  onChange?: (file: File) => void;
 }
 
 const Upload: FC<UploadProps> = (props) => {
-  const { action, onProgress, onSuccess, onError } = props;
+  const { action, beforeUpload, onProgress, onSuccess, onError, onChange } = props;
   const fileInput = useRef<HTMLInputElement>(null);
+  const post = (file: File) => {
+    const formData = new FormData();
+    formData.append(file.name, file);
+    Axios.post(action, formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+      onUploadProgress: (e) => {
+        console.log("e=====", e);
+        let percentage = Math.round((e.loaded * 100) / e.total) || 0;
+        if (percentage < 100) {
+          if (onProgress) {
+            onProgress(percentage, file);
+          }
+        }
+      },
+    })
+      .then((res) => {
+        if (onSuccess) {
+          onSuccess(res, file);
+        }
+        if(onChange){
+            onChange(file)
+        }
+      })
+      .catch((err) => {
+        if (onError) {
+          onError(err, file);
+        }
+        if(onChange){
+            onChange(file)
+        }
+      });
+  };
   const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (!files) {
@@ -25,30 +61,16 @@ const Upload: FC<UploadProps> = (props) => {
   const uploadFiles = (files: FileList) => {
     const postFiles = Array.from(files);
     postFiles.forEach((file) => {
-      const formData = new FormData();
-      formData.append(file.name, file);
-      Axios.post(action, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-        onUploadProgress: (e) => {
-            console.log('e=====', e)
-            let percentage = Math.round((e.loaded * 100) / e.total) || 0;
-            if(percentage < 100){
-                if(onProgress){
-                    onProgress(percentage, file)
-                }
-            }
-        },
-      }).then(res => {
-          if(onSuccess){
-            onSuccess(res, file)
-          }
-      }).catch(err => {
-          if(onError){
-            onError(err, file)
-          }
-      })
+      if (!beforeUpload) {
+        post(file);
+      } else {
+        const result = beforeUpload(file);
+        if (result && result instanceof Promise) {
+          result.then((processedFile) => post(processedFile));
+        } else if (result !== false) {
+          post(file);
+        }
+      }
     });
   };
   const handleClick = () => {
@@ -75,7 +97,7 @@ const Upload: FC<UploadProps> = (props) => {
 };
 
 Upload.defaultProps = {
-    action: ''
-}
+  action: "",
+};
 
 export default Upload;
