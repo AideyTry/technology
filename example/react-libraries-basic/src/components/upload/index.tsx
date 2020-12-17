@@ -1,33 +1,47 @@
-import React, {useEffect, ChangeEvent} from 'react'
-import Axios from 'axios'
+import React, { FC, useEffect, ChangeEvent, useRef } from "react";
+import Axios from "axios";
+import Button, { ButtonType } from "../Button/button";
 
-const Upload = () => {
-    useEffect(() => {
-        Axios.get('http://jsonplaceholder.typicode.com/posts')
-        .then(resp => {
-            console.log('resp=', resp)
-        })
-    }, [])
-    const handleFileChange = (e:ChangeEvent<HTMLInputElement>) => {
-        const files = e.target.files
-        console.log('files===', files)
-        if(files){
-            const uploadedFile = files[0]
-            const formData = new FormData()
-            console.log('formData===', formData)
-            formData.append(uploadedFile.name, uploadedFile)
-            Axios.post('http://jsonplaceholder.typicode.com/posts', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            }).then(resp => {
-                console.log('data=============', resp)
-            })
-        }
-    }
-    return <>
-        <input type="file" name="myFile" onChange={handleFileChange}/>
-    </>
+export interface UploadProps {
+  action?: string;
+  onProgress?: (percentage: number, file: File) => void;
+  onSuccess?: (data: any, file: File) => void;
+  onError?: (err: any, file: File) => void;
 }
 
-export default Upload
+const Upload: FC<UploadProps> = props => {
+    const {action, onProgress, onSuccess, onError} = props
+    const fileInput = useRef<HTMLInputElement>(null)
+  const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    console.log("files===", files);
+    if (!files) {
+        return
+    }
+    uploadFiles(files)
+  };
+  const uploadFiles = (file: FileList) => {
+    
+  }
+  const handleClick = () => {
+    if(fileInput.current){
+        fileInput.current.click()
+    }
+  }
+  return (
+    <>
+      <div>
+        <Button btnType={ButtonType.Primary} onClick={handleClick}>Upload</Button>
+        <input
+          ref={fileInput}
+          style={{ display: "none" }}
+          type="file"
+          name="myFile"
+          onChange={handleFileChange}
+        />
+      </div>
+    </>
+  );
+};
+
+export default Upload;
