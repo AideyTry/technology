@@ -29,5 +29,14 @@ const handleFetch = (query: string) => {
 // Each story then reuses that template
 export const DefaultAutoComplate = Template.bind({});
 DefaultAutoComplate.args = {
-  action: 'http://jsonplaceholder.typicode.com/posts'
+  action: 'http://jsonplaceholder.typicode.com/posts',
+  onProgress: (res, file) => {
+      console.log('onProgress=', res, file)
+  },
+  onSuccess: (res, file) => {
+      console.log('onSuccess=', res, file)
+  },
+  onError: (err, file) => {
+    console.log('onError=', err, file)
+  }
 };
