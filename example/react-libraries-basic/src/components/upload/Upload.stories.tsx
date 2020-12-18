@@ -15,7 +15,7 @@ export default {
   },
 } as Meta;
 const Template: Story<UploadProps> = (args) => {
-  return <Upload {...args}></Upload>
+  return <Upload {...args}><p>Upload</p></Upload>
 };
 
 const handleFetch = (query: string) => {
@@ -52,5 +52,10 @@ DefaultAutoComplate.args = {
   onError: (err, file) => {
     console.log('onError=', err, file)
   },
-  onChange: file => console.log('onChange=', file)
+  onChange: file => console.log('onChange=', file),
+  multiple: true,
+  drag: true,
+  name: 'fileName',
+  data: {'key': 'value'},
+  headers: {'X-Prowered': 'abc'}
 };

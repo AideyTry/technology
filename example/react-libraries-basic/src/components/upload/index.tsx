@@ -3,17 +3,18 @@ import Axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import Button, { ButtonType } from "../Button/button";
 import UploadList from './UploadList'
+import Dragger from './Dragger'
 
 export type UploadFileStatus = "ready" | "uploading" | "success" | "error";
 export interface UploadFile {
   uid: string;
   size: number;
-  name: string;
   status?: UploadFileStatus;
   percent?: number;
   raw?: File;
   response?: any;
   error?: any;
+  name: string;
 }
 export interface UploadProps {
   action: string;
@@ -24,6 +25,12 @@ export interface UploadProps {
   onError?: (err: any, file: File) => void;
   onChange?: (file: File) => void;
   onRemove?: (file: UploadFile) => void;
+  headers?: {[key: string] : any};
+  name?: string;
+  data?: {[key: string]: any};
+  accept?: string;
+  multiple?: boolean;
+  drag?: boolean;
 }
 
 const Upload: FC<UploadProps> = (props) => {
@@ -36,6 +43,13 @@ const Upload: FC<UploadProps> = (props) => {
     onError,
     onChange,
     onRemove,
+    name,
+    headers,
+    data,
+    accept,
+    multiple,
+    drag,
+    children
   } = props;
   const [fileList, setFileList] = useState<UploadFile[]>(defaultFileList || []);
   const fileInput = useRef<HTMLInputElement>(null);
@@ -67,9 +81,16 @@ const Upload: FC<UploadProps> = (props) => {
       return [_file, ...prevList];
     });
     const formData = new FormData();
-    formData.append(file.name, file);
+    // formData.append(file.name, file);
+    formData.append(name || 'file', file)
+    if(data){
+      Object.keys(data).forEach(key => {
+        formData.append(key, data[key])
+      })
+    }
     Axios.post(action, formData, {
       headers: {
+        ...headers,
         "Content-Type": "multipart/form-data",
       },
       onUploadProgress: (e) => {
@@ -145,15 +166,29 @@ const Upload: FC<UploadProps> = (props) => {
   return (
     <>
       <div>
-        <Button btnType={ButtonType.Primary} onClick={handleClick}>
+        {/* <Button btnType={ButtonType.Primary} onClick={handleClick}>
           Upload
-        </Button>
+        </Button> */}
+        <div className="turnip-file-input"
+        style={{display: 'inline-block'}}
+        onClick={handleClick}
+        >
+          {
+            drag ? <Dragger
+             onFile={files => uploadFiles(files)}>
+              {children}
+            </Dragger> : children
+          }
+        </div>
         <input
+          className="turnip-file-input"
           ref={fileInput}
           style={{ display: "none" }}
           type="file"
           name="myFile"
           onChange={handleFileChange}
+          accept={accept}
+          multiple={multiple}
         />
       </div>
       <UploadList
@@ -166,6 +201,7 @@ const Upload: FC<UploadProps> = (props) => {
 
 Upload.defaultProps = {
   action: "",
+  name: 'file'
 };
 
 export default Upload;

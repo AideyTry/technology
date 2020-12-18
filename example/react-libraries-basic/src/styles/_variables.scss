@@ -30,6 +30,18 @@ $danger: $red !default;
 $light: $gray-1 !default;
 $dark: $black !default; 
 
+$theme-colors: 
+(
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
 $font-family-sans-serif: --apple-system, BlinkMacSystemFOnt;
 $font-faimly-monospace: SFMono-Regular, Menlo;
 $font-family-base: $font-family-sans-serif !default;
@@ -175,4 +187,11 @@ $input-transition:                      border-color .3s ease-in-out, box-shadow
 $input-group-addon-color:               $input-color !default;
 $input-group-addon-bg:                  $gray-2 !default;
 $input-group-addon-border-color:        $input-border-color !default;
+
+// Progress bars
+$progress-font-size:                $font-size-base * .75 !default;
+$progress-bg:                       $gray-2 !default;
+$progress-border-radius:            $border-radius !default;
+$progress-bar-color:                $white !default;
+$progress-bar-transition:           width .6s ease !default;
 
