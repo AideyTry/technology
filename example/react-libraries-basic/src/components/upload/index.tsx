@@ -2,6 +2,7 @@ import React, { FC, useState, useEffect, ChangeEvent, useRef } from "react";
 import Axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import Button, { ButtonType } from "../Button/button";
+import UploadList from './UploadList'
 
 export type UploadFileStatus = "ready" | "uploading" | "success" | "error";
 export interface UploadFile {
@@ -22,6 +23,7 @@ export interface UploadProps {
   onSuccess?: (data: any, file: File) => void;
   onError?: (err: any, file: File) => void;
   onChange?: (file: File) => void;
+  onRemove?: (file: UploadFile) => void;
 }
 
 const Upload: FC<UploadProps> = (props) => {
@@ -33,6 +35,7 @@ const Upload: FC<UploadProps> = (props) => {
     onSuccess,
     onError,
     onChange,
+    onRemove,
   } = props;
   const [fileList, setFileList] = useState<UploadFile[]>(defaultFileList || []);
   const fileInput = useRef<HTMLInputElement>(null);
@@ -132,6 +135,13 @@ const Upload: FC<UploadProps> = (props) => {
       fileInput.current.click();
     }
   };
+  const handleRemove = (file: UploadFile) => {
+    console.log('remove file=', file)
+    setFileList((prevList) => prevList.filter(item => item.uid !== file.uid))
+    if(onRemove){
+      onRemove(file)
+    }
+  }
   return (
     <>
       <div>
@@ -146,6 +156,10 @@ const Upload: FC<UploadProps> = (props) => {
           onChange={handleFileChange}
         />
       </div>
+      <UploadList
+      fileList={fileList}
+      onRemove={handleRemove}
+      />
     </>
   );
 };
