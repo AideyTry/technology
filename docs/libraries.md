@@ -1,8 +1,8 @@
 <!--
  * @Author: Aiden
  * @Date: 2020-12-02 22:12:11
- * @LastEditTime: 2020-12-16 15:53:59
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2020-12-21 08:22:12
+ * @LastEditors: Aiden
  * @Description: 
 -->
 ## 完成一个组件库需要考虑的问题
@@ -161,3 +161,12 @@ npx -p @storybook/cli sb init (会自动检测是React还是Vue框架)
 #### mocky.io
 ### 四种常见的 POST 提交数据方式
 #### https://www.cnblogs.com/jpfss/p/10449287.html
+
+## JavaScript模块打包 
+###ES Modules
+### 
+```bash
+TypeScript files  .tsx文件通过tsc转换成ES Modules .jsx
+tsc的配置在tsconfig.json中，默认的配置文件是跟开发环境相关的，我们需要修改为跟最后打包模块相关
+npm link 进行测试，解决两个版本react问题？
+```
