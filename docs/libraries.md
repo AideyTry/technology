@@ -1,11 +1,14 @@
 <!--
  * @Author: Aiden
  * @Date: 2020-12-02 22:12:11
- * @LastEditTime: 2020-12-21 08:22:12
- * @LastEditors: Aiden
+ * @LastEditTime: 2020-12-30 10:37:04
+ * @LastEditors: Please set LastEditors
  * @Description: 
 -->
 ## 完成一个组件库需要考虑的问题
+```bash
+组件库->运行测试（单元测试以及e2e测试）-> npm publish ->build文档静态文件->上传到服务器
+```
 ### 代码结构
 ### 样式解决方案
 ### 组件需求分析和编码
@@ -170,3 +173,30 @@ TypeScript files  .tsx文件通过tsc转换成ES Modules .jsx
 tsc的配置在tsconfig.json中，默认的配置文件是跟开发环境相关的，我们需要修改为跟最后打包模块相关
 npm link 进行测试，解决两个版本react问题？
 ```
+
+
+## npm
+### 注意添加peerDependencies字段，提示必须要安装的依赖，为了解决组件库包和项目包版本冲突。
+
+### 单元测试有利于减少bug,代码规范有利于代码维护
+
+### 添加发布和commit前的检查
+
+## 使用Storybook生成静态文档页面
+
+## CI/CD
+### CI 持续集成
+```bash
+频繁的将代码集成到主干(master)
+快速发现错误
+防止分支大幅偏离主干
+```
+### CD 持续交付、持续部署
+```bash
+频繁的将软件的新版本交付给质量团队或用户
+代码通过评审以后，自动部署到生产环境
+```
+
+### Travis
+
+## 总结
