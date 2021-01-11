@@ -1,8 +1,8 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-08-04 23:50:40
- * @LastEditTime: 2020-12-04 01:25:41
- * @LastEditors: Aiden
+ * @LastEditTime: 2021-01-11 14:54:02
+ * @LastEditors: Please set LastEditors
  * @Description: 
  -->
 
@@ -37,3 +37,5 @@
  [高阶函数](docs/highFun.md)
 
  [前端组件库](docs/libraries.md)
+
+ [Nginx](docs/nginx.md)
