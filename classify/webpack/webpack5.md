@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden
  * @Date: 2021-03-03 09:54:45
- * @LastEditTime: 2021-03-04 15:19:16
+ * @LastEditTime: 2021-03-10 14:25:34
  * @LastEditors: Aiden
  * @Description: 
  * @FilePath: \technology\classify\webpack\webpack5.md
@@ -101,5 +101,40 @@ babel-loader使Bable和webpack转义JavaScript文件
 2.然后调用预设@babel/preset-env把ES6语法树转换成ES5语法树 @babel/preset-env
 3.再把ES5语法树重新生成es5代码 @babel/core
 **/
+```
+### 8、Eslint配置
+webpack.config.js文件
+```js
+{
+    test: /\.(js|vue)$/,
+    use: 'eslint-loader', // 先指定代码校验，然后再编译代码
+    enforce: 'pre', // 强制指定书序 在之前执行
+    options: {fix:true}, //启动自动修复
+    exclude: /node_modules/ // 不需要检查node_modules
+}
+```
+
+.eslintrc.js文件
+```js
+module.exports = {
+    root: true, //根配置文件
+    // extends: 'airbnb', // 继承eslint-config-airbnb的规则，用react时添加
+    extends: ['plugin:vue/recommended', 'eslint:recommended'], // 继承eslint-plugin-vue规则
+    // parser: "babel-eslint", // 需要一个parser解析器来帮我们把源代码转成抽象语法树
+    // 指定解析器选择
+    parserOptions: {
+        sourceType: "module",
+        ecmaVersion: 2015
+    },
+    // 指定脚本的运行环境
+    env: {
+        browser: true
+    },
+    // 启用规则以及各自的错误级别
+    rules: {
+        "indent": ["error": 2], // 缩进风格
+        "no-console": "error" // 禁止使用console.log
+    }
+}
 ```
 
