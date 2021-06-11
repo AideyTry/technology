@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden
  * @Date: 2021-03-03 09:54:45
- * @LastEditTime: 2021-03-10 14:25:34
+ * @LastEditTime: 2021-04-08 11:16:42
  * @LastEditors: Aiden
  * @Description: 
  * @FilePath: \technology\classify\webpack\webpack5.md
@@ -102,7 +102,11 @@ babel-loader使Bable和webpack转义JavaScript文件
 3.再把ES5语法树重新生成es5代码 @babel/core
 **/
 ```
-### 8、Eslint配置
+
+### 8、处理js、jsx插件
+js: @babel/preset-env
+jsx: (Vue)@vue/babel-preset-jsx, (React)@babel/preset-react
+### 9、Eslint配置
 webpack.config.js文件
 ```js
 {
