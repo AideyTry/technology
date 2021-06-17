@@ -1,7 +1,7 @@
 /*
  * @Author: Aiden
  * @Date: 2021-06-11 10:03:40
- * @LastEditTime: 2021-06-11 10:54:41
+ * @LastEditTime: 2021-06-16 16:43:53
  * @LastEditors: Aiden
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -33,6 +33,12 @@ module.exports = merge(common, {
             '@': '../src'
         }
     },
+    resolveLoader: {
+        modules: [
+          'node_modules',
+          resolve(__dirname, '../loaders')
+        ]
+      },
     devServer: {
         compress: true,
         port: 8088,

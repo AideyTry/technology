@@ -1,7 +1,7 @@
 /*
  * @Author: Aiden
  * @Date: 2021-06-11 10:03:45
- * @LastEditTime: 2021-06-11 14:06:22
+ * @LastEditTime: 2021-06-17 16:51:04
  * @LastEditors: Aiden
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -16,7 +16,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin')
 const common = require('./webpack.base.js')
 
 module.exports = merge(common, {
-    mode: 'production',
+    mode: 'development',
     entry: './src/index.js',
     output: {
         path: resolve(__dirname, '../dist'),
@@ -42,10 +42,4 @@ module.exports = merge(common, {
             })
         ]
     },
-    resolveLoader: {
-        modules: [
-          'node_modules',
-          resolve(__dirname, '../loaders')
-        ]
-      }
 })
