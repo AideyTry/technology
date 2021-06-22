@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --config build/dev.js",
-    "build": "webpack --config build/prod.js"
+    "test": "cross-env env_config=test webpack --config build/prod.js",
+    "build": "cross-env env_config=prod webpack --config build/prod.js"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",
@@ -36,6 +37,7 @@
   },
   "dependencies": {
     "@ccm/ui": "^0.0.5",
+    "express": "^4.17.1",
     "vue": "^2.6.14"
   }
 }
