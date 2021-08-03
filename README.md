@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-08-04 23:50:40
- * @LastEditTime: 2021-08-03 17:43:05
+ * @LastEditTime: 2021-08-03 17:43:48
  * @LastEditors: Aiden
  * @Description: 
  -->
@@ -13,6 +13,8 @@
   [基于Vue公共UI组件库开发](docs/vue-library.md)
 
   [Vue知识点总结](docs/vue.md)
+
+  [记忆](docs/memory.md)
 
   [JavaScript原理](docs/javascript.md)
 
