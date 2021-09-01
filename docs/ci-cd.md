@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden
  * @Date: 2021-09-01 15:31:16
- * @LastEditTime: 2021-09-01 15:51:01
+ * @LastEditTime: 2021-09-01 16:00:01
  * @LastEditors: Aiden
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -15,32 +15,32 @@ docker image pull node
 #### 2.通过Dockerfile制作项目镜像
 - Dockerfile
 ```bash
-      FROM node  基于node镜像来去做的
-      COPY ./app /app 将当前目录下的app目录下面的文件拷贝到镜像里的/app目录中
-      WORKDIR /app  指定工作路劲，类似于执行cd命令
-      RUN npm install 在/app目录下安装依赖，安装后的依赖会打包到image目录中（编译镜像的时候执行）
-      EXPOSE 3000  暴露3000端口，允许外部链接这个端口
-      CMD npm start （启动容器的时候执行） 
+    FROM node # 基于node镜像来去做的
+    COPY ./front-website /front-website # 将当前目录下的front-website目录下面的文件拷贝到镜像里的/front-website目录中
+    WORKDIR /front-website # 指定工作路劲，类似于执行cd命令
+    RUN yarn # 安装
+    EXPOSE 3016 # 暴露3016端口，允许外部链接这个端口
+    CMD yarn server # 启动容器的时候执行
 ```
 - 创建image
 ```bash
-docker build -t front-end . //.代表以某个文件夹作为构建目录
+docker build -t front-end . # .代表以某个文件夹作为构建目录
 ```
 
 #### 3.通过docker-compose配置文件来管理多个docker容器
 ```bash
 version: "2.2"
 services:
-  website-front-end:
-    image: ccm-front-end
+  website-front-end: # 前端服务
+    image: front-end
     ports:
       - "8080:3016"
-  website-backend:
-    image: ccm-backend
+  website-backend: # 后端服务
+    image: backend
     environment:
       - DOCUMENT_CONF_WATCH_DIR=/site-docs # 设置环境变量，访问到容器内部的文件夹，相当于访问对应的宿主机的目录
     volumes: # 将宿主机某个文件夹目录映射到容器内部文件夹内
-      - "/home/ccmproject/ccm-website/front-end/ccm-website/docs:/site-docs"
+      - "/home/user/front-end/docs:/site-docs"
     ports:
       - "9000:8080"
 ```
@@ -52,20 +52,20 @@ docker-compose up -d
 
 #### 常用docker指令
 ```bash
-1.镜像相关常用指令
+镜像相关常用指令
     docker image ls 查看全部镜像
     docker image inspect ubuntu 查看ubuntu的详情
     docker image pull centos 拉取centeos镜像
     docker image rmi centos(按名称或者按照image id删除)
-2.容器相关常用指令
-      docker container run -d -p 8080:3000 项目镜像名称 /bin/bash(如果配置了CMD则去掉/bin/bash)  # 将3000映射为8080端口并在后台运行容器
-      docker container ps # 查看运行中的容器
-      docker container ps -a # 查看所有的容器
-      docker container ps -l # 查看最新的容器
-      docker container run it centos /bin/bash # 进入centos容器内部
-      docker container rm $(docker ps -a -q) # 删除全部容器
-      docker kill 容器id  # 直接杀死结束运行的容器
-      docker stop 容器id  # 直接停止结束运行的容器 
-      docker start 容器id  # 启动运行的容器
-      docker exec -it 775c7c9ee1e1 /bin/bash # 进入docker的某个容器
+容器相关常用指令
+    docker container run -d -p 8080:3000 项目镜像名称 /bin/bash(如果配置了CMD则去掉/bin/bash)  # 将3000映射为8080端口并在后台运行容器
+    docker container ps # 查看运行中的容器
+    docker container ps -a # 查看所有的容器
+    docker container ps -l # 查看最新的容器
+    docker container run it centos /bin/bash # 进入centos容器内部
+    docker container rm $(docker ps -a -q) # 删除全部容器
+    docker kill 容器id  # 直接杀死结束运行的容器
+    docker stop 容器id  # 直接停止结束运行的容器 
+    docker start 容器id  # 启动运行的容器
+    docker exec -it 775c7c9ee1e1 /bin/bash # 进入docker的某个容器
 ```
