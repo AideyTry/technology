@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden
  * @Date: 2021-09-01 15:31:16
- * @LastEditTime: 2021-09-02 09:45:54
+ * @LastEditTime: 2021-09-02 09:49:22
  * @LastEditors: Aiden
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -11,6 +11,7 @@
 #### 1.拉取项目需要依赖的镜像
 ```bash
 docker image pull node
+docker image pull java
 ```
 #### 2.通过Dockerfile制作项目镜像
 - Dockerfile
@@ -24,7 +25,7 @@ docker image pull node
     CMD yarn server # 启动容器的时候执行
 
    # 2.后端Dockerfile
-    FROM d7521a0d951a # 基于java jdk的镜像来去做的
+    FROM java # 基于java或者java jdk的镜像来去做的都可以
     COPY ./web-backend /web-backend
     WORKDIR /web-backend
     EXPOSE 8080
