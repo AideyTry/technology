@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden
  * @Date: 2021-09-01 15:31:16
- * @LastEditTime: 2021-09-01 16:00:01
+ * @LastEditTime: 2021-09-02 09:45:54
  * @LastEditors: Aiden
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -15,16 +15,26 @@ docker image pull node
 #### 2.通过Dockerfile制作项目镜像
 - Dockerfile
 ```bash
+   # 1.前端Dockerfile
     FROM node # 基于node镜像来去做的
     COPY ./front-website /front-website # 将当前目录下的front-website目录下面的文件拷贝到镜像里的/front-website目录中
     WORKDIR /front-website # 指定工作路劲，类似于执行cd命令
     RUN yarn # 安装
     EXPOSE 3016 # 暴露3016端口，允许外部链接这个端口
     CMD yarn server # 启动容器的时候执行
+
+   # 2.后端Dockerfile
+    FROM d7521a0d951a # 基于java jdk的镜像来去做的
+    COPY ./web-backend /web-backend
+    WORKDIR /web-backend
+    EXPOSE 8080
+    CMD java -jar target/backend-0.0.1-SNAPSHOT.jar # 运行java包
+
 ```
 - 创建image
 ```bash
-docker build -t front-end . # .代表以某个文件夹作为构建目录
+docker build -t front-end . # .代表以某个文件夹作为构建目录，构建名称为front-end的前端镜像
+docker build -t web-backend . # .代表以某个文件夹作为构建目录，构建名称为web-backend的后端镜像
 ```
 
 #### 3.通过docker-compose配置文件来管理多个docker容器
