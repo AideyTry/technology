@@ -1,13 +1,13 @@
 <!--
  * @Author: Aiden
  * @Date: 2021-09-01 15:31:16
- * @LastEditTime: 2021-09-02 09:49:22
- * @LastEditors: Aiden
+ * @LastEditTime: 2021-09-23 17:01:33
+ * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
 -->
 ## CI/CD
-### Docker部署项目
+### Docker手动部署项目
 #### 1.拉取项目需要依赖的镜像
 ```bash
 docker image pull node
@@ -79,4 +79,19 @@ docker-compose up -d
     docker stop 容器id  # 直接停止结束运行的容器 
     docker start 容器id  # 启动运行的容器
     docker exec -it 775c7c9ee1e1 /bin/bash # 进入docker的某个容器
+```
+
+### Nginx + Jenkins自动化部署
+#### Nginx： 静态服务器、反向代理
+##### 安装Nginx: http://nginx.org/en/linux_packages.html#RHEL-CentOS
+##### 配置vim /etc/nginx/conf.d/*.conf
+```    location / { ## 做静态服务
+        root /home/ccmproject/ccm-website/front-end/ccm;
+	      index  index.html;
+    }
+
+    location /prod/ { ## 反向代理
+       proxy_pass http://127.0.0.1:8080/;
+
+    }
 ```
