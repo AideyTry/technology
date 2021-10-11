@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden
  * @Date: 2021-09-01 15:31:16
- * @LastEditTime: 2021-09-23 17:01:33
+ * @LastEditTime: 2021-10-11 17:10:17
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -95,3 +95,46 @@ docker-compose up -d
 
     }
 ```
+
+### 安装Jenkins
+- 参考官方文档安装https://www.jenkins.io/
+### 实现普通手动部署
+- 新建任务->选择构建一个自由风格的软件项目
+- 源码管理
+  - Repositories: https://e.coding.net/ccm-adapt/greenwich/ccm-website.git
+  - Credentials: 添加邮箱和密码
+  - Branches to build: 指定分支
+  ![git](/images/jenkins1.png)
+- 构建环境
+  - 添加插件Run the build in an NVM managed environment(nvm-wrapper)
+  - NVM Settings
+    - Node version: v16.8.0
+    - NVM_NODEJS_ORG_MIRROR: https://nodejs.org/dist
+    - NVM_IOJS_ORG_MIRROR: https://iojs.org/dist
+    - NVM Install URL: https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh
+    - NVM_DIR installation dir: $HOME/.nvm
+    ![node](/images/jenkins2.png)
+- 构建
+  - 执行shell
+    ```
+    yarn
+    yarn build
+    cd /var/lib/jenkins/workspace/ccm-front-end/dist
+    tar -cvf build.tar.gz *
+    cp build.tar.gz /home/ccmproject/ccm-website/front-end/ccm
+    cd /home/ccmproject/ccm-website/front-end/ccm
+    tar -xvf build.tar.gz
+    rm -rf build.tar.gz
+    ``` 
+    ![shell](/images/jenkins3.png)
+
+## 通过Jenkins实现自动部署
+### 在手动部署基础上Jenkins配置构建触发器
+- 添加Generic Webhook Trigge插件设置token的值
+![trigge](/images/jenkins.png)
+### coding中添加Service Hook，选择jenkins
+```
+事件触发选好事件类型，选择好对应的过滤条件，并配置服务器url和配置token.
+```
+![coding1](/images/coding1.png)
+![coding](/images/coding.png)
