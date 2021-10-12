@@ -1,8 +1,8 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-08-04 23:50:40
- * @LastEditTime: 2021-09-01 16:03:39
- * @LastEditors: Aiden
+ * @LastEditTime: 2021-10-12 09:26:00
+ * @LastEditors: Aiden(戴林波)
  * @Description: 
  -->
 
@@ -11,6 +11,8 @@
   [CI/CD](docs/ci-cd.md)
   
   [基于Vue公共UI组件库开发](docs/vue-library.md)
+
+  [Node](docs/node.md)
 
   [Vue知识点总结](docs/vue.md)
 
