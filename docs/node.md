@@ -47,3 +47,9 @@ UI渲染和js是共用线程的，互斥的原因是因为：如果页面一条�
 ```
 ![eventLoop](/images/eventLoop.png)
 #### Node.js Event Loop
+#### HTTP
+#### HTTPS
+#### fs
+#### os
+#### Buffer
+#### Streams
