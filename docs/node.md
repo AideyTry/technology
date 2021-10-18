@@ -53,3 +53,56 @@ UI渲染和js是共用线程的，互斥的原因是因为：如果页面一条�
 #### os
 #### Buffer
 #### Streams
+
+#### Node的事件循环
+##### Node中也有一个自己的事件循环，包含了i/o操作还有其他一些。从node10以上都和浏览器的执行顺序一致。
+- timers setInterval定时器
+- poll 阶段，轮询 会在特定的时候进行阻塞，执行i/o回调
+- check setImmediate (每个宏任务执行完毕后会清空微任务)
+![node_event_loop](/images/node_event_loop.jpg)
+案例1
+```js
+setTimeout(() => {
+    console.log('timeout')
+}, 0)
+Promise.resolve().then(()=>{
+    console.log('promise')
+})
+process.nextTick(() => {//当执行栈中执行完毕后，立即调用的
+    console.log('nextTick')
+})
+
+执行顺序：nextTick promise timeout
+
+```
+
+案例2
+```js
+    setTimeout(() => {
+     console.log('setTimeout')
+    }, 0)
+    setImmediate(()=>{
+        console.log('immediate')
+    })
+
+    // 执行顺序setTimeout  immediate
+```
+
+
+案例3
+```js
+const fs = require('fs')
+fs.readFile('./node.md', function(){ // i/o 轮询时会执行i/o回调，如果没有定义setImmediate会等待剩下的i/o完成，或者定时器到达时间
+    setTimeout(() => {
+      console.log('timeout')
+    }, 0)
+    setImmediate(() => { // 不是特别重要的任务 可以放到setImmediate中
+        console.log('immediate')
+    })
+})
+```
+```js
+process.nextTick当前同步代码执行完毕，立即调用的 微任务
+i/o 文件读写自动会放到poll阶段中处理
+setImmediate 用的很少
+```
