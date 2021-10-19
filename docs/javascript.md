@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-10-18 10:54:04
+ * @LastEditTime: 2021-10-19 11:03:55
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -26,6 +26,47 @@ JavaScript是通过```<script>```元素插入到HTML中的。这个元素可用�
 ## 提升
 ### 函数声明会被提升，但是函数表达式却不会被提升。
 ### 函数声明会被提升到普通变量声明之前，如果是重复的变量声明则会被忽略，重复的函数声明则是后面的会覆盖前面的。
+
+## 三、语言基础
+### 语法
+#### var/const/let
+- var 声明的范围是函数作用域，有变量提升的作用。
+- let 声明的范围是块作用域。
+- const 其行为与let基本相同，主要区别在于声明变量必须同时初始化变量，非复杂类型的变量不能修改值。
+- 作用域介绍：
+  - 1),全局作用域------全局定义
+  - 2), 函数作用域-------在函数内部定义
+  - 3), 块级作用域-----ES6新增的，用｛｝来界定块级作用域。
+  
+案例
+```js
+      for(let i =0; i<10; i++){
+            console.log('i=', i)
+       }
+       // 打印0,1,2,3,4,5,6,7,8,9
+       for(var j = 0; j< 10; j++){
+            console.log('j=', j)
+       }
+       // 打印0,1,2,3,4,5,6,7,8,9
+       for(let i =0; i<10; i++){// 在使用let声明迭代变量时，JavaScript引擎在后台会为每个迭代循环声明一个新的迭代变量。每个setTimeout引用的都是不同的变量实例，所以console.log输出的是我们期望的值，也就是循环执行过程中每个迭代变量的值。
+        setTimeout(() => {
+            console.log('i=', i)
+        }, 0)
+       }
+       // 打印0,1,2,3,4,5,6,7,8,9
+       for(var j = 0; j< 10; j++){
+        setTimeout(() => {
+            console.log('j=', j)
+        }, 0)
+       }
+       // 打印10,10,10,10,10,10,10,10,10,10
+
+       const a
+       console.log(a)
+       // 打印Uncaught SyntaxError: Missing initializer in const declaration
+
+```
+开发时，推荐const优先，let次之。
 
 ## 高阶函数
 ### 定义：接收一个函数作为参数或者将函数作为返回值输出的函数。例如：lodash/debounce
