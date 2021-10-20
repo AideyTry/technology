@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-10-20 13:51:48
+ * @LastEditTime: 2021-10-20 14:12:24
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -68,7 +68,8 @@ JavaScript是通过```<script>```元素插入到HTML中的。这个元素可用�
 #### 数据类型
 - 6中简单数据类型：Undefined、Null、Boolean、Number、String、Symbol,1种复杂数据类型：Object
 - 使用typeof操作符判断数据类型
-- Number类型还包含NAN、Infinity
+- 在定义将来要保存对象值的变量时，建议使用null来初始化，不要使用其他值。
+- Number类型还包含NaN、Infinity
 - 浮点值的精确度最高可达17位小数，但在算术计算中远不如整数精确。例如：0.1和0.2得到的不是0.3，而是0.30000000000000004
 - 对于非常大或非常小的数值，浮点值可以用科学计数法来表示。科学记数法用于表示一个应该乘以10的给定次幂的数值。ECMAScript中科学记数法的格式要求是一个数值（整数和浮点数）后跟一个大写或小写的字母e,再加上一个要乘的10的多少次幂。例如：3.125e7为31250000   3e-2为0.03
 ## 提升
