@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden(戴林波)
  * @Date: 2021-10-20 14:38:53
- * @LastEditTime: 2021-10-20 17:07:32
+ * @LastEditTime: 2021-10-21 14:38:40
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -55,3 +55,11 @@ app.listen(3013)
 - 控制是否向下执行（常见的是用作权限的管理）
 - 中间件可以扩展req和res中的方法
 - 中间件可以提前处理一些逻辑
+
+#### router
+- 带参数的路由
+- 多层路由
+案例
+```js
+
+```
