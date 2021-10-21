@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-10-20 14:12:24
+ * @LastEditTime: 2021-10-21 11:15:41
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -72,6 +72,32 @@ JavaScript是通过```<script>```元素插入到HTML中的。这个元素可用�
 - Number类型还包含NaN、Infinity
 - 浮点值的精确度最高可达17位小数，但在算术计算中远不如整数精确。例如：0.1和0.2得到的不是0.3，而是0.30000000000000004
 - 对于非常大或非常小的数值，浮点值可以用科学计数法来表示。科学记数法用于表示一个应该乘以10的给定次幂的数值。ECMAScript中科学记数法的格式要求是一个数值（整数和浮点数）后跟一个大写或小写的字母e,再加上一个要乘的10的多少次幂。例如：3.125e7为31250000   3e-2为0.03
+- Symbol
+  1. Symbol出现的原因：在ES5的对象属性名都是字符串，这容易造成属性名的冲突。比如你使用了一个他人提供的对象，但又想为这个对象添加新的方法，新的名称就有可能与现在方法产生冲突。但Symbol的出现保证每个属性的名字都是独一无二的，这样就从根本上防止属性名的冲突。
+  2. 由于每一个 Symbol 值都是不相等的，这意味着 Symbol 值可以作为标识符，用于对象的属性名，就能保证不会出现同名的属性。这对于一个对象由多个模块构成的情况非常有用，能防止某一个键被不小心改写或覆盖。
+  案例：
+  ```
+        const s1 = Symbol('1')
+        const s2 = Symbol('2')
+        const s3 = Symbol()
+        const s4 = Symbol()
+        console.log(s1,s2) // Symbol(1) Symbol(2)
+        console.log('3')
+        const a = {}
+        a[s1] = 3
+        console.log(a) // {Symbol(1): 3}
+        console.log(s3 === s4) // false
+        console.log(a[s1]) // 3
+  ```
+  - Object
+  ECMAScript中的对象其实就是一组数据和功能的集合。每个Object实例都有如下属性和方法
+    1. constructor:用于创建当前对象的函数。
+    2. hasOwnProperty(propertyName)：用于判断当前对象实例（不是原型）上是否存在给定的属性。要检查的属性名必须是字符串
+    3. propertyIsEnumerable(propertyName):用于判断给定的属性名是否可以使用for-in语句枚举。要检查的属性名必须是字符串。
+    4. isPrototypeOf(object):用于判断当前对象是否为另外一个对象的原型。
+    5. toLocaleString()：返回对象的字符串表示，该字符串反映对象所在的本地化执行环境。
+    6. toString()：返回对象的字符串表示。
+    7. valueOf():返回对象对应的字符串、数值或布尔值表示。
 ## 提升
 ### 函数声明会被提升，但是函数表达式却不会被提升。
 ### 函数声明会被提升到普通变量声明之前，如果是重复的变量声明则会被忽略，重复的函数声明则是后面的会覆盖前面的。
