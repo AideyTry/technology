@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden(戴林波)
  * @Date: 2021-10-22 15:02:33
- * @LastEditTime: 2021-10-22 16:24:55
+ * @LastEditTime: 2021-10-25 14:38:44
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -42,3 +42,70 @@ SQL规范
 - 开源免费
 - 性能高
 - 安装使用都简单
+
+### MySQL安装
+直接下一步安装
+- 只要选择Developer Default模式安装，此模式会安装开发人员需要的常用组件，在安装这些组件时需要对应的环境依赖
+
+### 配置
+- 安装时候默认配置的端口是3306，可进行修改
+- 安装时候会有账号密码设置，默认账号为root
+- 可以点击add user添加新用户
+- 设置服务名称，默认MySQL80(Windows Service Name,MySQL数据库在Windows系统中运行的服务名)
+### MySQL卸载
+1. 关闭/启动服务
+    管理员启动cmd命令行
+    ```
+    net stop MySQL80
+    net start MySQL80
+    ```
+
+2. 卸载软件
+
+    首先卸载MySQL Server 8.0，再把其他MySQL相关的全部卸载
+    ![卸载软件](/images/MySQL/uninstall.png)
+
+3. 删除目录
+
+    - MySQL的安装目录
+      ```
+      C:\Program Files\MySQL
+      ```
+    - MySQL的数据文件目录（默认隐藏）
+      ```
+      C:\ProgramData\MySQL
+      ```
+    - 删除注册表中
+     ```
+    HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\MySQL80
+     ```
+### 使用DBMS工具操作 
+- SQLyog
+- Navicat for MySQL
+安装MySQL会默认安装了MySQL Command line Client命令行工具
+
+#### MySQL Command line Client使用
+- 开始菜单打开：MysQL-MySQL8.0 Command line Client
+- 连接MySQL,输入密码即可
+
+![connet](/images/MySQL/connet.png);
+- 关闭MySQL Command line Client：输入exit指令即可退出
+- 常用指令
+```shell
+show databases; #显示有哪些数据库
+use world; #切换到world数据库
+show tables; # 显示里面有哪些表
+select database(); # 查询当前所在的数据库
+desc [表名称]; #查看表的结构
+```
+
+#### 可视化工具Navicat使用
+- 官网下载默认安装
+- 打开软件直接左上角连接
+![连接视图](/images/MySQL/connect2.png)
+![连接](/images/MySQL/Navicat-connect.png)
+- 新建数据库
+ 1. 字符集选择utf8mb4;排序规则选择utf8mb4_bin
+
+ ### 以Navicat为工具创建表
+ - 主键：不能重复的字段，唯一的。
