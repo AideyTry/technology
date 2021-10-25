@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden(戴林波)
  * @Date: 2021-10-19 10:32:54
- * @LastEditTime: 2021-10-19 10:42:17
+ * @LastEditTime: 2021-10-24 18:05:25
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -38,6 +38,17 @@
         const a = {}
         a.p = 1
         console.log('a=', a)
+
+        function setName(p){
+            p.name = 'zs'
+            p = {}
+            p.name = 'ls'
+        }
+        const person = {}
+        setName(person)
+        console.log(person)
+        console.log('instanceof ', person instanceof Object)
+        console.log('ins Arr', person instanceof Array)
 
     </script>
 </body>

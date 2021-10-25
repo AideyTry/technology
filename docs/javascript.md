@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-10-23 10:04:07
+ * @LastEditTime: 2021-10-25 10:08:53
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -117,6 +117,22 @@ if/while/do-while/for/for-in/for-of/break/continue/switch
 ### 函数
 如果不写返回值的话返回undefined，箭头函数不加{}直接返回操作后的结果，加{}时也会默认返回undefined。
 return后面如果不加值的话也会返回undefined
+
+## 变量、作用域、内存
+- JavaScript变量可以保存两种类型的值：原始值和引用值。
+- typeof操作符可以确定值的原始类型，instanceof操作符用于确保值的引用类型。
+
+## 基本引用类型
+- 引用值（或者对象）是某个特定引用类型的实例。
+- 正则表达式
+匹配第一个“bat”或“cat”,忽略大小写
+```js
+const pat1 = /[bc]at/i;
+或者
+const pat2 = new RegExp("[bc]at", "i")
+```
+- 原始包装类型，ECMAScript提供了3中特殊的引用类型：Boolean、Number、String.
+- 引用类型与原始包装类型的主要区别在于对象的生命周期。在通过new实例化引用类型后，得到的实例会在离开作用域时被销毁，而自动创建的原始值包装对象则只存在于访问它的那行代码执行期间。
 ## 提升
 ### 函数声明会被提升，但是函数表达式却不会被提升。
 ### 函数声明会被提升到普通变量声明之前，如果是重复的变量声明则会被忽略，重复的函数声明则是后面的会覆盖前面的。
