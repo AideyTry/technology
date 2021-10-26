@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden(戴林波)
  * @Date: 2021-10-22 15:02:33
- * @LastEditTime: 2021-10-25 14:38:44
+ * @LastEditTime: 2021-10-26 14:40:03
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -109,3 +109,116 @@ desc [表名称]; #查看表的结构
 
  ### 以Navicat为工具创建表
  - 主键：不能重复的字段，唯一的。
+
+ ### DDL(Data Definition Language)数据定义语言（定义数据库和表的数据结构）
+ #### 创建表格以及增删改查
+ ```DDL
+-- 1.创建表结构关键字一般大写
+CREATE TABLE student
+(
+id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(64) NOT NULL,
+age INT(11) DEFAULT NULL,
+city VARCHAR(64) DEFAULT '深圳'
+)
+
+SELECT * FROM student; # *代表所有的行所有的列。from代表哪个表，查询sudent表.
+DESC student; # 查看表结构
+
+-- 2.如何修改和增加表里的字段
+ALTER TABLE student ADD COLUMN idcard VARCHAR(64) NULL;  #ALTER为修改。修改表student，增加列idcard字段
+
+-- 3.修改列
+ALTER TABLE student MODIFY idcard VARCHAR(5) NOT NULL; # 修改列,idcard字段
+
+-- 4.删除列
+ALTER TABLE student DROP idcard;
+
+ ```
+
+ #### 如何增加约束
+ ```DDL
+-- 1.为表增加主键
+ALTER TABLE student ADD PRIMARY KEY(id);
+-- 2.增加唯一约束
+ALTER TABLE student ADD UNIQUE INDEX uq_student_idcard(idcard);
+-- 3.增加默认约束(默认值)
+ALTER TABLE student MODIFY COLUMN city VARCHAR(64) DEFAULT '上海';
+-- 4.主外健
+ALTER TABLE score ADD CONSTRAINT fk_score_student_id FOREIGN KEY(student_id) REFERENCES student(id);
+ ```
+
+ ### DML(Data Manipulation Language)数据操纵语言（用于数据库操作）
+
+ ## SQL
+ 简介：Structured Query Language结构化查询语言
+ ### 为什么要用SQL
+ 1. 使用界面操作数据库不方便。
+ 2. 我们需要通过应用程序去操作数据库。
+ ### SQL组成
+ - DDL(data definition language)数据定义语言。
+    主要的命令有CREATE、ALTER、DROP等，DDL主要是用在定义或改变表的结构，数据类型，表之间的链接和约束等初始化工作上面，他们大多在建立表时使用。
+ - DML（data manipulation language）数据操纵语言
+    它们是SELECT、UPDATE、INSERT、DELETE，就像它的名字一样，这4条命令是用来对数据库里的数据进行操作的语言。
+ - DCL(data control language)数据库控制语言（开发者一般用的少）
+ 是用来设置或更改数据库用户或角色权限的语句。
+
+ ### 运算符
+ - 算术运算符
+
+ ```dml
+ + - * / %
+ ```
+
+ - 逻辑运算符
+ ```dml
+ AND # 并且
+ OR  # 或
+ NOT # 取反
+ ```
+
+ ### 数据操纵语言基础
+ #### 插入数据行
+ - 语法
+ ```dml
+INSERT [INTO] 表名 [(列名)] VALUES (值列表)
+ ```
+- 案例，向学生表插入一条记录，姓名张三，身份证430723，年龄30，城市深圳
+
+```dml
+	INSERT INTO student(name, idcard, age, city)
+	VALUES ('zs', '430723', 30, '深圳');
+```
+- 注意事项
+  1. 每次插入一行数据，不能只插入一部分数据，插入的数据是否有效将按照整行的完整性要求来检验。
+  2. 每个数据值的数据类型、精度、位数必须与要对应的列名精确匹配。
+  3. 不能为标识符整定值。
+  4. 如果某字段设置不能为空，则必须插入数据。
+  5. 插入数据时还要符合检查约束的要求。
+  6. 有缺省值的列，可以使用DEFAULT关键字来代替插入实际的值。
+#### 更新数据行
+- 语法
+```dml
+UPDATE 表名 SET 列名 = 更新值 [WHERE 更新条件] 
+```
+
+- 案例
+```dml
+	UPDATE student SET name='wx',city='北京' WHERE id=3;
+```
+
+- 注意
+1. 可以一次更新多列，可以用逗号隔开；
+2. 可以指定更新条件，如果有多个条件可以用AND OR NOT
+
+#### 删除
+- 语法案例
+```dml
+	DELETE FROM student WHERE id = 5; #删除id为5的列
+  DELETE FROM student; #删除整张表清空数据，如果下次新增数据时，原理的id号不能用了，会写入记录，可以恢复数据。
+  TRUNCATE table student; # 截断表，删除整张表情况数据，如果下次新增数据时，完全从新出发，原来的id号可用，不写入记录，不可以恢复数据。
+
+```
+- 注意
+  1. 删除是整行删除，不需要提供列名。
+  2. 如果要删除的表是主表，那需要先删除子表。
