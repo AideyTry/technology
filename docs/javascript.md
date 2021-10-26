@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-10-25 10:08:53
+ * @LastEditTime: 2021-10-26 10:30:37
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -133,6 +133,9 @@ const pat2 = new RegExp("[bc]at", "i")
 ```
 - 原始包装类型，ECMAScript提供了3中特殊的引用类型：Boolean、Number、String.
 - 引用类型与原始包装类型的主要区别在于对象的生命周期。在通过new实例化引用类型后，得到的实例会在离开作用域时被销毁，而自动创建的原始值包装对象则只存在于访问它的那行代码执行期间。
+- 当代码开始执行时，全局上下文中会存在两个内置对象：Global和Math。其中Global对象在大多数ECMAScript实现中无法直接访问，浏览器将其实现为window对象。
+- 在使用eval()的时候必须积为慎重，特别是在解释用户输入的内容时。因为这个方法会对XSS利用暴露出很大的攻击面。恶意用户可能会插入导致你网站或应用崩溃的代码。
+- [XSS](https://blog.csdn.net/qq_33929420/article/details/112003122?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163521483816780269823179%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163521483816780269823179&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-112003122.first_rank_v2_pc_rank_v29&utm_term=xss&spm=1018.2226.3001.4187)
 ## 提升
 ### 函数声明会被提升，但是函数表达式却不会被提升。
 ### 函数声明会被提升到普通变量声明之前，如果是重复的变量声明则会被忽略，重复的函数声明则是后面的会覆盖前面的。

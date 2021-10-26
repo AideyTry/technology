@@ -1,0 +1,28 @@
+<!--
+ * @Author: Aiden(戴林波)
+ * @Date: 2021-10-26 10:11:28
+ * @LastEditTime: 2021-10-26 10:22:55
+ * @LastEditors: Aiden(戴林波)
+ * @Description: 
+ * @Email: aiden.dai@bayconnect.com.cn
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <input type="text" id="input">
+</head>
+<body>
+    <script>
+        const i = document.querySelector('#input')
+        i.addEventListener('input', (e) => {
+            console.log('e=', e.target.value)
+        })
+        console.log('eval(123)')
+        eval("console.log(123)")
+    </script>
+</body>
+</html>
