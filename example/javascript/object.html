@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden(戴林波)
  * @Date: 2021-10-21 10:52:47
- * @LastEditTime: 2021-10-21 11:58:31
+ * @LastEditTime: 2021-10-27 14:00:42
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -31,6 +31,17 @@
         console.log(o1.propertyIsEnumerable('a'))
         console.log(o2.valueOf())
         console.log(O.isPrototypeOf(oo))
+        const p = {
+            "name": 23,
+            1: 'age',
+            true: 33,
+            null: 5,
+            undefined: 77,
+            NaN: 90,
+            Object: 323
+        }
+        console.log('p=', p)
+        console.log(p['true'])
     </script>
 </body>
 </html>

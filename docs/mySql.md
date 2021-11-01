@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden(戴林波)
  * @Date: 2021-10-22 15:02:33
- * @LastEditTime: 2021-10-26 14:40:03
+ * @LastEditTime: 2021-10-27 17:45:52
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -222,3 +222,27 @@ UPDATE 表名 SET 列名 = 更新值 [WHERE 更新条件]
 - 注意
   1. 删除是整行删除，不需要提供列名。
   2. 如果要删除的表是主表，那需要先删除子表。
+
+#### 查询
+简介：查询就是从客户端发出查询请求数据库服务器，并从数据库返回查询结果的过程。
+- 语法
+```DML
+SELECT <列名>
+FROM <表名>
+[WHERE <查询条件表达式>]
+[ORDER BY <排序的列名>[ASC或DESC]]
+```
+- 查询北京的学生信息，并按ID正序排列
+```dml
+SELECT id,name
+FROM student
+WHERE city="北京"
+ORDER BY id ASC;
+```
+- 别名，将city改为home
+```dml
+SELECT id,name,city as home
+FROM student
+WHERE city="北京"
+ORDER BY id ASC;
+```
