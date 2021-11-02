@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-10-26 10:30:37
+ * @LastEditTime: 2021-11-02 11:21:07
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -136,6 +136,13 @@ const pat2 = new RegExp("[bc]at", "i")
 - 当代码开始执行时，全局上下文中会存在两个内置对象：Global和Math。其中Global对象在大多数ECMAScript实现中无法直接访问，浏览器将其实现为window对象。
 - 在使用eval()的时候必须积为慎重，特别是在解释用户输入的内容时。因为这个方法会对XSS利用暴露出很大的攻击面。恶意用户可能会插入导致你网站或应用崩溃的代码。
 - [XSS](https://blog.csdn.net/qq_33929420/article/details/112003122?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163521483816780269823179%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163521483816780269823179&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~top_positive~default-1-112003122.first_rank_v2_pc_rank_v29&utm_term=xss&spm=1018.2226.3001.4187)
+
+## 集合引用类型
+对于多数Web开发任务来说，选择Object还是Map只是个人偏好问题，影响不大。不过对于在乎内存和性能的开发者来说，对象和映射之间确实存在显著的差异。
+- 内存占用：不同的浏览器的情况不同，但给定固定大小的内存，Map大约可以比Object多存储50%的键值对。
+- 插入性能：如果代码涉及大量插入操作，那么显然Map的性能更佳。
+- 查找速度：如果代码涉及大量查找操作，那么某些情况下可能选择Object会更好。
+- 删除性能：对于大多数浏览器引擎来说，Map的delete()操作都比插入和查找更快。如果代码涉及大量删除操作，那么毫无疑问应该选择Map.
 ## 提升
 ### 函数声明会被提升，但是函数表达式却不会被提升。
 ### 函数声明会被提升到普通变量声明之前，如果是重复的变量声明则会被忽略，重复的函数声明则是后面的会覆盖前面的。
