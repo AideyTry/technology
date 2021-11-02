@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden(戴林波)
  * @Date: 2021-10-22 15:02:33
- * @LastEditTime: 2021-10-27 17:45:52
+ * @LastEditTime: 2021-11-02 15:17:04
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -246,3 +246,74 @@ FROM student
 WHERE city="北京"
 ORDER BY id ASC;
 ```
+- 查询idcard为空的行
+```dml
+SELECT *
+FROM student
+WHERE idcard IS NULL
+```
+- 分页操作（查询几条数据）
+```dml
+SELECT id,name,city
+FROM student
+limit 1,3 # 以索引为1开始取三条数据。
+```
+
+- 查询学生都是来自哪些不同的城市
+```dml
+SELECT DISTINCT city
+FROM student;
+```
+
+- SQL中+号只能用来加数字
+```dml
+SELECT 1 + 1
+```
+
+- 函数可用来加字符串
+```dml
+SELECT CONCAT('a', 'b'); # ab
+```
+
+- 模糊匹配
+```dml
+SELECT * from student
+WHERE city LIKE '%京'; # 以京结尾的，'上%'是以上开头的。'%蒙%'表示中间包含蒙
+```
+
+- 函数
+  1. 字符函数
+
+  函数名称 | 说明
+  ------- | ------
+  CONCAT | 字符串链接
+  CONCAT_WS | 使用指定的分隔符进行字符连接
+  FORMAT | 数字格式化
+  LOWER  | 转小写字母
+  UPPER  | 转大写字母
+  LEFT   | 返回字符串s开始的最左边n个字符
+  RIGHT | 返回字符串s开始的最右边n个字符
+
+  2. 数学函数
+
+  函数名称 | 说明
+  ------- | ------
+  CELL | 向上取整
+  FLOOR | 向下取整数
+  DIV | 整数取
+  MOD  | 取余（取模）
+  POWER  | 幂运算
+  ROUND   | 四舍五入
+  TRUNCATE | 数字截取
+
+  3. 日期函数
+
+  函数名称 | 说明
+  ------- | ------
+  NOW | 当前日期和时间
+  CURDATE | 当前日期
+  CURTIME | 当前时间
+  DATA_ADD  | 日期变化
+  DATEDIFF  | 计算日期差
+  DATE_FORMAT   | 日期格式化
+  
