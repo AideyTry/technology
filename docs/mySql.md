@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden(戴林波)
  * @Date: 2021-10-22 15:02:33
- * @LastEditTime: 2021-11-02 15:17:04
+ * @LastEditTime: 2021-11-03 15:19:44
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -316,4 +316,94 @@ WHERE city LIKE '%京'; # 以京结尾的，'上%'是以上开头的。'%蒙%'�
   DATA_ADD  | 日期变化
   DATEDIFF  | 计算日期差
   DATE_FORMAT   | 日期格式化
+
+  4. 其他函数
+  ```dml
+  # if函数
+  SELECT IF(1>2,1,0) # 类似三元表达式
   
+  # case函数
+    CASE 要判断的字段或表达式
+    WHEN 常量1 then  要显示的值
+    WHEN 常量2 then 要显示的值
+    ELSE
+    end
+    # 案例1
+    SELECT 
+    CASE grade
+    WHEN 100 THEN '满分'
+    WHEN 90 THEN '优秀'
+    ELSE '其他'
+    END
+    FROM score
+        
+    # 案例2
+    SELECT 
+    CASE
+    WHEN grade > 90 THEN '优'
+    WHEN grade > 80 THEN '良'
+    WHEN grade > 70 THEN '中'
+    WHEN grade > 60 THEN '及格'
+    ELSE '不及格'
+    END
+    FROM score
+  ```
+
+  5. 自定义函数
+     - 语法
+
+     ```dml
+      CREATE FUNCTION func_name RETURNS {String | Integer}
+      body
+     ```
+     单行函数体
+     ```dml
+      CREATE FUNCTION ZNOW(format VARCHAR(64)) RETURNS VARCHAR(64)
+      RETURN DATA_FORMAT(NOW(), format)
+
+      SELECT ZNOW('%Y年%m月%d日 %H时%i分%s秒')
+     ```
+
+     多行函数体
+     ```dml
+      CREATE FUNCTION ADD_USER(name VALUES(NAME));
+      BEGIN
+        INSERT INTO student(name) VALUES(name);
+        return LAST_INSERT_ID()
+      END
+      SELECT ADD_USER('zhangfei')
+     ```
+
+- 聚合函数
+   定义：对一组值进行计算，并返回计算后的值，一般用来统计数据。
+     - SUM
+      ```dml
+      # 全部分数加一起求总分
+       select SUM(grade) from score;
+      ```
+     - AVG
+     - MAX,MIN
+    
+- 分组
+  分组查询就是按某列的值进行分组，相同的值分成一组，然后可以对此组内进行求平均、求和等计算。
+  
+
+- 子查询
+   - 子查询就是指出现在其它SQL语句中的SELECT语句，必须始终出现在圆括号中；
+   - 子查询可以包含多个关键字或条件
+   - 子查询的外层查询可以是： SELECT/INSERT/UPDATE/SET等。
+   - 子查询可以返回常量、一行数据、一列数据或其它子查询。
+   案例：
+
+   ```dml
+    -- 查询年龄大于平均年龄的学生
+    SELECT * FROM student
+    WHERE age > (SELECT AVG(age) FROM student);
+   ```
+   
+- 表连接
+   连接类型
+   - INNER JOIN内连接
+   - LEFT JOIN 左外连接
+   - RIGHT JOIN 右外连接
+   - ON连接条件
