@@ -1,26 +1,29 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-08-04 23:50:40
- * @LastEditTime: 2021-10-20 14:38:48
+ * @LastEditTime: 2021-11-05 13:48:57
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  -->
 
 技术总结文档归纳
 ## 目录
+
+  [JavaScript](docs/javascript.md)
+
   [CI/CD](docs/ci-cd.md)
   
   [基于Vue公共UI组件库开发](docs/vue-library.md)
 
   [Node](docs/node.md)
 
+  [MySQL](docs/mySql.md)
+
   [Express](docs/express.md)
 
   [Vue知识点总结](docs/vue.md)
 
   [记忆](docs/memory.md)
-
-  [JavaScript原理](docs/javascript.md)
 
   [算法](docs/arithmetic.md)
   [数据结构](docs/data-structure.md)

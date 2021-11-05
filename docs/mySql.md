@@ -1,12 +1,12 @@
 <!--
  * @Author: Aiden(戴林波)
  * @Date: 2021-10-22 15:02:33
- * @LastEditTime: 2021-11-04 21:13:16
- * @LastEditors: Aiden
+ * @LastEditTime: 2021-11-05 14:32:42
+ * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
 -->
-# mySql关系数据库
+# MySql关系数据库
 ## 数据库概念
 ### 作用：
 - 存储大量数据，方便检索和访问。
@@ -437,8 +437,6 @@ WHERE city LIKE '%京'; # 以京结尾的，'上%'是以上开头的。'%蒙%'�
 
   4. 数据库的ER图
      ER图：(Entity Relationship Diagram)，实体关系图，是指以实体、关系、属性三个基本概括数据的基本结构，从而描述静态数据结构的概念模式。
-     ![er1](/images/MySQL/er1.jpg)
-     ![er2](/images/MySQL/er2.jpg)
 
   5. 数据库设计三大范式
      - 第一范式
@@ -451,8 +449,26 @@ WHERE city LIKE '%京'; # 以京结尾的，'上%'是以上开头的。'%蒙%'�
   6. RBAC
      基于角色的权限访问控制（Role-Based Access Control）
      - 在RBAC中最重要的概念包括：用户(User),角色（Role）, 权限（Permission）,资源（Resource）
+     
+          ![er1](/images/MySQL/er1.jpg)
+     ![er2](/images/MySQL/er2.jpg)
+     - 1对1关系
+     
+      在每个表里面分别设置一个对方表的id属性，例如在user表格中设置对应role表中id的role_id,在role表中设置对应user表中id的user_id.
+     ![r1-1](/images/MySQL/r1-1.jpg)
 
-#### 事物
+     - 1对多关系(1个用户可以关联多个角色，但是一个角色只能属于一个用户)
+
+      在多的一方加入一个字段，表示属于哪个1，例如在role表中添加一个对应user中id的user_id字段。
+      ![r1-n](/images/MySQL/r1-n.jpg)
+
+     - 多对多关系
+
+     多对多关系时，需要新建第三张表并设置外键关联关系
+     ![rm-n](/images/MySQL/rm-n.jpg)
+
+
+#### 事务
 1. 什么是事务
    - 事务是作为单个逻辑工作单元执行的一系列操作
    - 多个操作作为一个整体向系统提交，要么都执行，要么都不执行。
