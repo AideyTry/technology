@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-11-02 11:21:07
+ * @LastEditTime: 2021-11-05 11:16:50
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -143,6 +143,44 @@ const pat2 = new RegExp("[bc]at", "i")
 - 插入性能：如果代码涉及大量插入操作，那么显然Map的性能更佳。
 - 查找速度：如果代码涉及大量查找操作，那么某些情况下可能选择Object会更好。
 - 删除性能：对于大多数浏览器引擎来说，Map的delete()操作都比插入和查找更快。如果代码涉及大量删除操作，那么毫无疑问应该选择Map.
+
+## 异步
+  处理异步编程方法https://blog.csdn.net/weixin_30278237/article/details/99470449?ops_request_misc=&request_id=&biz_id=102&utm_term=javascript%E5%A4%84%E7%90%86%E5%BC%82%E6%AD%A5%E6%96%B9%E5%BC%8F&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-99470449.first_rank_v2_pc_rank_v29&spm=1018.2226.3001.4187
+  - 回调函数
+  - 事件监听
+
+    采用事件驱动模式。
+    任务的执行不取决代码的顺序，而取决于某一个事件是否发生。
+  - 发布/订阅
+  - Promise对象
+  - Generator
+  案例
+  ```js
+    // dav中使用情况
+    *getDataSetList({ payload }, { call, put }) {
+      const response = yield call(dataSetList, { param: payload });
+      if (response.bcjson.flag === '1') {
+        if (response.bcjson.items) {
+          yield put({
+            type: 'DataSetList',
+            payload: response.bcjson.items,
+          });
+        }
+      } else {
+        throw new Error(response.bcjson.msg);
+      }
+    },
+  ```
+  - async（推荐）
+
+  async函数的语法规则总体上比较简单，难点是错误的处理机制。
+### async/await和Generator区别
+async/await实际上是对Generator（生成器）的封装，async函数是Generator函数的语法糖，将Generator的星号换成async，将yield换成await，async函数比Generator函数更好用.
+
+- Generator与async function都是返回一个特定类型的对象：
+
+- async/await自带执行器，不需要手动调用next()就能自动执行下一步async始终返回一个Promise，使用await或者.then()来获取返回值，而Generator返回的是生成器对象，一个类似{ value: XXX, done: true }这样结构的Object
+- await能够返回Promise的resolve/reject的值
 ## 提升
 ### 函数声明会被提升，但是函数表达式却不会被提升。
 ### 函数声明会被提升到普通变量声明之前，如果是重复的变量声明则会被忽略，重复的函数声明则是后面的会覆盖前面的。
