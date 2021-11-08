@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-11-05 11:16:50
+ * @LastEditTime: 2021-11-08 13:56:27
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -64,6 +64,7 @@ JavaScript是通过```<script>```元素插入到HTML中的。这个元素可用�
 
 ```
 开发时，推荐const优先，let次之。
+- 注意：使用const声明可以让浏览器运行时强制保持变量不变，也可以让静态代码分析工具提前发现不合法的赋值操作。因此，很多开发者认为应该优先使用const来声明变量，只在提前知道未来会有修改时，再使用let。这样可以让开发者更有信心地推断某些变量的值永远不会变，同时也能迅速发现因意外赋值导致的非预期行为。
 
 #### 数据类型
 - 6中简单数据类型：Undefined、Null、Boolean、Number、String、Symbol,1种复杂数据类型：Object
