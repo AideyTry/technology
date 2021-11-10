@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-11-08 13:56:27
+ * @LastEditTime: 2021-11-10 14:27:13
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -182,6 +182,16 @@ async/await实际上是对Generator（生成器）的封装，async函数是Gene
 
 - async/await自带执行器，不需要手动调用next()就能自动执行下一步async始终返回一个Promise，使用await或者.then()来获取返回值，而Generator返回的是生成器对象，一个类似{ value: XXX, done: true }这样结构的Object
 - await能够返回Promise的resolve/reject的值
+
+## 八、对象、类与面向对象编程
+### 创建对象
+##### 工厂模式
+问题：没有解决对象标识问题（即新创建的对象是什么类型）
+##### 构造函数模式
+问题：构造函数的主要问题在于，其定义的方法会在每个实例上都创建一遍
+##### 原型模式
+问题：原型的主要问题源自它的共享性；真正的问题是包含引用值的属性。
+
 ## 提升
 ### 函数声明会被提升，但是函数表达式却不会被提升。
 ### 函数声明会被提升到普通变量声明之前，如果是重复的变量声明则会被忽略，重复的函数声明则是后面的会覆盖前面的。
