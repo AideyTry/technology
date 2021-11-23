@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-11-10 14:27:13
+ * @LastEditTime: 2021-11-23 11:26:57
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -192,6 +192,37 @@ async/await实际上是对Generator（生成器）的封装，async函数是Gene
 ##### 原型模式
 问题：原型的主要问题源自它的共享性；真正的问题是包含引用值的属性。
 
+### 继承
+#### 原型链继承
+缺点：主要问题是原型中包含引用值的时候
+#### 盗用构造函数继承（经典继承）
+缺点：必须在构造函数中定义方法
+#### 组合继承（推荐）
+思路：使用原型链继承原型上的属性和方法，而通过盗用构造函数继承实例属性
+```JS
+        function SuperType(name) {
+            this.name = name
+        }
+        SuperType.prototype.say = function(){
+            console.log('say')
+            console.log('name=', this.name)
+        }
+        function SubType(name, age){
+            SuperType.call(this, name)
+            this.age = age
+        }
+        SubType.prototype = new SuperType()
+        SubType.prototype.sayAge = function(){
+            console.log(this.age)
+        }
+        const ins1 = new SubType('zs', 33)
+        ins1.say()
+        ins1.sayAge()
+```
+### 类class
+### 面向对象编程
+面向对象编程就是将需求抽象成一个对象，然后针对这个对象分析其特征（属性）与动作（方法）。这个对象我们称之为类。面向对象编程其中的一个特点就是封装，就是说把你需要的功能放在一个对象里面。
+## 九、函数
 ## 提升
 ### 函数声明会被提升，但是函数表达式却不会被提升。
 ### 函数声明会被提升到普通变量声明之前，如果是重复的变量声明则会被忽略，重复的函数声明则是后面的会覆盖前面的。

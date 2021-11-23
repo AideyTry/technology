@@ -1,0 +1,39 @@
+<!--
+ * @Author: Aiden(戴林波)
+ * @Date: 2021-11-23 09:49:18
+ * @LastEditTime: 2021-11-23 10:48:57
+ * @LastEditors: Aiden(戴林波)
+ * @Description: 
+ * @Email: aiden.dai@bayconnect.com.cn
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function SuperType(name) {
+            this.name = name
+        }
+        SuperType.prototype.say = function(){
+            console.log('say')
+            console.log('name=', this.name)
+        }
+        function SubType(name, age){
+            SuperType.call(this, name)
+            this.age = age
+        }
+        SubType.prototype = new SuperType()
+        SubType.prototype.sayAge = function(){
+            console.log(this.age)
+        }
+        const ins1 = new SubType('zs', 33)
+        ins1.say()
+        ins1.sayAge()
+    </script>
+</body>
+</html>
