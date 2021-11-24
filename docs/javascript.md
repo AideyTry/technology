@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-11-23 11:26:57
+ * @LastEditTime: 2021-11-24 14:14:40
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -223,6 +223,17 @@ async/await实际上是对Generator（生成器）的封装，async函数是Gene
 ### 面向对象编程
 面向对象编程就是将需求抽象成一个对象，然后针对这个对象分析其特征（属性）与动作（方法）。这个对象我们称之为类。面向对象编程其中的一个特点就是封装，就是说把你需要的功能放在一个对象里面。
 ## 九、函数
+### 参数
+- 因为函数式按顺序初始化的，所以后定义默认值的参数可以引用先定义的参数。例如：
+  ```js
+  function makeKing(name = 'Henry', numerals = name){
+    return `King ${name} ${numerals}`
+  }
+  console.log(makeKing())
+  ```
+- 内部this指向
+  1. function函数，由函数调用时决定。
+  2. 箭头函数，this引用的是定义箭头函数的上下文
 ## 提升
 ### 函数声明会被提升，但是函数表达式却不会被提升。
 ### 函数声明会被提升到普通变量声明之前，如果是重复的变量声明则会被忽略，重复的函数声明则是后面的会覆盖前面的。

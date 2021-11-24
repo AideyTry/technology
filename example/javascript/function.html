@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cons = (...values) => {
+            console.log('values=', values)
+        }
+        cons(...[1,2,3,4,5])
+        function King(){
+            if(!new.target){
+                throw 'King must be instantiated using "new"'
+            }
+            console.log('King instantiated using "new"')
+        }
+        new King()
+        function makeKing(name = 'Henry', numerals = name){
+    return `King ${name} ${numerals}`
+  }
+  console.log(makeKing())
+    </script>
+</body>
+</html>
