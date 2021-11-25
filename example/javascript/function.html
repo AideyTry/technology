@@ -23,6 +23,18 @@
     return `King ${name} ${numerals}`
   }
   console.log(makeKing())
+  window.color = 'red'
+  let o = {
+      color: 'blue'
+  }
+  function sayColor(){
+    console.log('this.color=', this.color)
+  }
+  console.log(this)
+  sayColor.call(o)
+  const bindSayColor = sayColor.bind(o)
+  sayColor()
+  bindSayColor()
     </script>
 </body>
 </html>
