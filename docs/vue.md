@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden
  * @Date: 2021-03-23 11:17:31
- * @LastEditTime: 2021-11-23 18:07:15
+ * @LastEditTime: 2021-11-25 17:27:43
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -99,7 +99,11 @@ npm init @vitejs/app
 - 业务组件
 
   包含：登录注册、购物车等
-#### Nuxt.js 3
 
-#### 插件
-volar
+### 现代Web应用的三大构成：组件、数据、路由。
+
+### Vuex
+- Vuex 就相当于我们项目中的大管家，集中式存储管理应用的所有组件的状态。
+- 什么时候的数据用 Vuex 管理，什么时候数据要放在组件内部使用 ref 管理呢？
+
+  对于一个数据，如果只是组件内部使用就是用 ref 管理；如果我们需要跨组件，跨页面共享的时候，我们就需要把数据从 Vue 的组件内部抽离出来，放在 Vuex 中去管理。
