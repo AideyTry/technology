@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-11-25 16:42:25
+ * @LastEditTime: 2021-11-30 11:01:20
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -243,6 +243,13 @@ async/await实际上是对Generator（生成器）的封装，async函数是Gene
 - 内存泄漏
 
   内存空间使用完毕之后未回收  
+
+## 十、 Promise
+### 用法
+  - Promise类：解决异步问题的
+    1. 静态方法（Promise.xxx）：Promise.all Promise.resolve Promise.reject Promise.race
+    2. 原型上的方法（new Promise.xxx）：then, catch, finally
+    3. 有三种状态，pending（等待态）、成功、失败；状态默认是pending等待态。可以从pending转化为成功/失败态，但是不能从成功/失败转化为成功/失败
   
 ## 提升
 ### 函数声明会被提升，但是函数表达式却不会被提升。
