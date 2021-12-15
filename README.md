@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-08-04 23:50:40
- * @LastEditTime: 2021-11-30 16:52:08
+ * @LastEditTime: 2021-12-13 06:36:20
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  -->
@@ -20,6 +20,8 @@
   [Node](docs/node.md)
 
   [MySQL](docs/mySql.md)
+
+  [Redis](docs/redis.md)
 
   [Express](docs/express.md)
 

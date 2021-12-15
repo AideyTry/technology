@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden(戴林波)
  * @Date: 2021-10-22 15:02:33
- * @LastEditTime: 2021-11-05 14:32:42
+ * @LastEditTime: 2021-12-15 11:25:33
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: aiden.dai@bayconnect.com.cn
@@ -46,8 +46,74 @@ SQL规范
 - 安装使用都简单
 
 ### MySQL安装
-直接下一步安装
-- 只要选择Developer Default模式安装，此模式会安装开发人员需要的常用组件，在安装这些组件时需要对应的环境依赖
+
+- Windows安装：直接下一步安装，只要选择Developer Default模式安装，此模式会安装开发人员需要的常用组件，在安装这些组件时需要对应的环境依赖
+- Linux安装
+
+  1. 参考：https://cloud.tencent.com/developer/article/1778484
+  2. 在centos中使用:yum -y install mysql-community-server 命令
+     ```
+      All matches were filtered out by modular filtering for argument: mysql-community-server
+      Error: Unable to find a match: mysql-community-server
+     ```
+     解决办法：
+     禁用本地的 MySQL 模块
+     ```
+      $:yum module disable mysql
+     ```
+  3. MySQL8以上连接mysql注意事项
+     参考： https://www.cnblogs.com/babyshe/articles/14544320.html
+       
+     通常使用navicat连接mysql8.x版本会报如下错误：
+      ```
+      navicat error: 2003 -can't connnect to mysql server on 1.15.247.162. 10061 unknown error
+
+      ```
+     解决方案:
+
+   - 设置密码
+
+     (1). 默认情况下需要密码登录，而MySQL 8版本以上开始时候没有设置密码，所以需要在配置文件中vi /etc/my.cnf添加skip-grant-tables=1
+    
+
+     (2). 跳过密码登录进去后通过指令 flush privileges; 刷新一下权限
+          ```
+          $: flush privileges;
+          ```
+     
+     (3). 设置复杂度高的密码，否则简单的密码不会通过
+       ```
+       $: ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Dlb19901214%';
+       ```
+     (4).进入vi /etc/my.cnf注释掉跳过密码登录的指令skip-grant-tables=1
+     
+     (5).重启mysql
+     ```
+     $:service mysqld restart
+     ```
+     
+   - 配置外网访问
+
+     (1).登录进入mysql指令，然后输入设置的密码
+       ```
+        $:mysql -u root -p
+       ```
+     (2).进入mysql库：
+       ```
+       $:use mysql;
+       ```
+     (3).更新域属性，'%'表示允许外部访问：
+     ```
+       $: update user set host='%' where user='root';
+     ```
+     (4).设置其他主机可访问root用户
+     ```
+       $:grant all privileges on *.* to 'root'@'%' with grant option;
+     ```
+     (5).最后刷新权限
+     ```
+       $:flush privileges;
+     ```
 
 ### 配置
 - 安装时候默认配置的端口是3306，可进行修改

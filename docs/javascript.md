@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-12-08 11:08:06
+ * @LastEditTime: 2021-12-13 10:53:16
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -372,3 +372,14 @@ Promise.prototype.then = function(onFulfilled, onRejected){
 
 module.exports = Promise
 ```
+
+## 十一、客户端检测
+### 能力检测
+
+    能力检测是javascript运行时中使用一套简单的检测逻辑，测试浏览器是否支持某种特性。
+    
+### 用户代理检测
+
+    用户代理测通过浏览器的用户代理字符串确定使用的是什么浏览器。
+
+注意：在选择客户端检测方法时，首选时使用能力检测。用户代理检测是最后一个的选择，因为它过于依赖用户代理字符串（用户代理字符串可修改）。

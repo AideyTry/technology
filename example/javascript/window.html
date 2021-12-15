@@ -1,0 +1,37 @@
+<!--
+ * @Author: Aiden(戴林波)
+ * @Date: 2021-12-09 10:10:14
+ * @LastEditTime: 2021-12-09 10:40:24
+ * @LastEditors: Aiden(戴林波)
+ * @Description: 
+ * @Email: jason_dlb@sina.cn
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div style="width: 200px;height:300px;background-color: #00f;padding:20px;margin:30px">
+
+    </div>
+</head>
+<body>
+    <script>
+        console.log('window=', window)
+        window.addEventListener('resize', () => {
+            console.log('innerwidth=', window.innerWidth)
+            console.log('outerWidth=',window.outerWidth)
+            console.log('innerHeihgt=', window.innerHeight)
+            console.log('outerHeight=', window.outerHeight)
+            console.log('clientWidth=', document.documentElement.clientWidth)
+            
+        })
+        setTimeout(() => {
+            console.log('2')
+            window.moveTo(0, 0)
+        }, 2000)
+    </script>
+</body>
+</html>
