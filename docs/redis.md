@@ -1,7 +1,7 @@
 <!--
  * @Author: Aiden(戴林波)
  * @Date: 2021-12-13 06:36:27
- * @LastEditTime: 2021-12-13 13:52:11
+ * @LastEditTime: 2021-12-15 16:35:35
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  * @Email: jason_dlb@sina.cn
@@ -34,3 +34,7 @@
 ## Redis在windos下安装
    
    https://www.redis.com.cn/redis-installation.html
+
+## Redis在Linux下
+   1. vi /etc/redis.conf设置密码
+   2. 启动时候要指定配置文件redis-server /etc/redis.conf
