@@ -1,0 +1,37 @@
+<!--
+ * @Author: Aiden(戴林波)
+ * @Date: 2021-12-17 09:35:13
+ * @LastEditTime: 2021-12-17 10:59:57
+ * @LastEditors: Aiden(戴林波)
+ * @Description: 
+ * @Email: jason_dlb@sina.cn
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+function curry(f) { // curry(f) 执行柯里化转换
+  return function(a) {
+    return function(b) {
+      return f(a, b);
+    };
+  };
+}
+
+// 用法
+function sum(a, b) {
+  return a + b;
+}
+
+let curriedSum = curry(sum);
+
+alert( curriedSum(1)(2) ); // 3
+    </script>
+</body>
+</html>

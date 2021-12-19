@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2020-03-29 21:45:40
- * @LastEditTime: 2021-12-13 10:53:16
+ * @LastEditTime: 2021-12-17 10:54:55
  * @LastEditors: Aiden(戴林波)
  * @Description: This is JavaScript
  -->
@@ -383,3 +383,14 @@ module.exports = Promise
     用户代理测通过浏览器的用户代理字符串确定使用的是什么浏览器。
 
 注意：在选择客户端检测方法时，首选时使用能力检测。用户代理检测是最后一个的选择，因为它过于依赖用户代理字符串（用户代理字符串可修改）。
+
+## JavaScript应用
+### 函数柯里化
+   
+    概念：
+        柯里化（Currying）是一种关于函数的高阶技术。它不仅被用于 JavaScript，还被用于其他编程语言。
+
+柯里化是一种函数的转换，它是指将一个函数从可调用的 f(a, b, c) 转换为可调用的 f(a)(b)(c)。
+
+柯里化不会调用函数。它只是对函数进行转换。
+参考：https://zh.javascript.info/currying-partials
