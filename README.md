@@ -1,8 +1,8 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-08-04 23:50:40
- * @LastEditTime: 2021-12-13 06:36:20
- * @LastEditors: Aiden(戴林波)
+ * @LastEditTime: 2021-12-22 22:11:57
+ * @LastEditors: Aiden
  * @Description: 
  -->
 
@@ -16,6 +16,8 @@
   [基于Vue公共UI组件库开发](docs/vue-library.md)
 
   [Uni-app](docs/uni-app.md)
+
+  [Git](docs/git.md)
 
   [Node](docs/node.md)
 
