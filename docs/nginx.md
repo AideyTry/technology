@@ -1,8 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2021-01-11 14:54:16
- * @LastEditTime: 2021-01-14 13:27:52
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-01-02 21:56:19
+ * @LastEditors: Aiden(戴林波)
  * @Description: In User Settings Edit
  * @FilePath: \technology\docs\nginx.md
 -->
@@ -112,3 +112,8 @@ location ~ ^/api {
     proxy_pass http://127.0.0.1:3000;
 }
 ```
+
+问题解决
+- Nginx出现403 forbidden 报错的方法
+
+  当配置自己的静态服务路径后，报错是因为由于启动用户和nginx工作用户不一致所致，因此需要进入vim /etc/nginx/nginx.conf中将user nginx; 注释，然后加入user root;
