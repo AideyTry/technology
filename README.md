@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-08-04 23:50:40
- * @LastEditTime: 2021-12-13 06:36:20
+ * @LastEditTime: 2022-03-16 22:39:25
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  -->
@@ -14,6 +14,8 @@
   [CI/CD](docs/ci-cd.md)
   
   [基于Vue公共UI组件库开发](docs/vue-library.md)
+
+  [微信分享](docs/wechat-share.md)
 
   [Uni-app](docs/uni-app.md)
 
