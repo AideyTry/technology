@@ -1,7 +1,7 @@
 <!--
  * @Author: DaiLinBo
  * @Date: 2019-08-04 23:50:40
- * @LastEditTime: 2022-03-16 22:39:25
+ * @LastEditTime: 2022-03-16 22:56:09
  * @LastEditors: Aiden(戴林波)
  * @Description: 
  -->
@@ -18,6 +18,8 @@
   [微信分享](docs/wechat-share.md)
 
   [Uni-app](docs/uni-app.md)
+
+  [Git](docs/git.md)
 
   [Node](docs/node.md)
 
