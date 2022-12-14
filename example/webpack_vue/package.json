@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@ccm/ui": "^0.0.5",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "vue": "^2.6.14"
   }
 }
